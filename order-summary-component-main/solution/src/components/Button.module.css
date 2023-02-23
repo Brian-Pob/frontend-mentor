@@ -28,7 +28,7 @@
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: filter 0.2s ease-in-out, scale 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, filter 0.2s ease-in-out, scale 0.2s ease-in-out;
   min-width: 18rem;
   will-change: filter;
   /* Drop shadow filter fix for Safari */
@@ -36,6 +36,6 @@
 
 .secondary:hover {
   filter: drop-shadow(0 5px 7px #00000020);
-  transition: filter 0.2s ease-in-out, scale 0.2s ease-in-out;
-  scale: 1.05;
+  color: var(--dark);
+  transition: color 0.2s ease-in-out, filter 0.2s ease-in-out, scale 0.2s ease-in-out;
 }
