@@ -1,4 +1,4 @@
-# Frontend Mentors
+# Frontend Mentor
 
 My solutions to various challenges from [Frontend Mentor](https://www.frontendmentor.io/).
 
@@ -18,7 +18,7 @@ My solutions to various challenges from [Frontend Mentor](https://www.frontendme
 If it's crossed out it means I've completed it. If it doesn't have a folder it means I haven't started it yet.
 
 * ~~[QR Code Component](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H)~~
-* [Order Summary Component](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj)
+* ~~[Order Summary Component](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj)~~
 * [Single Price Grid Component](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc)
 
 ## License
