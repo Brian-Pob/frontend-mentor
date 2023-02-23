@@ -13,6 +13,14 @@ My solutions to various challenges from [Frontend Mentor](https://www.frontendme
 
 * Me - [Github](https://github.com/Brian-Pob) - [Twitter](https://twitter.com/brianmpdotdev) - [LinkedIn](https://www.linkedin.com/in/Brian-Pob/)
 
+## Challenges
+
+If it's crossed out it means I've completed it. If it doesn't have a folder it means I haven't started it yet.
+
+* ~~[QR Code Component](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H)~~
+* [Order Summary Component](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj)
+* [Single Price Grid Component](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc)
+
 ## License
 
 Whatever Frontend Mentor uses lol.
