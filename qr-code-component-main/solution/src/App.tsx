@@ -1,26 +1,25 @@
-import type { Component } from 'solid-js';
+import type { Component, ParentComponent, children } from 'solid-js';
 
-import logo from './logo.svg';
 import styles from './App.module.css';
+import logo from './logo.svg';
+
+const Card: ParentComponent = (props) => {
+  return <div class={styles.card}>{props.children}</div>;
+};
 
 const App: Component = () => {
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
+    <Card>
+      Improve your front-end skills by building projects Scan the QR code to
+      visit Frontend Mentor and take your coding skills to the next level
+      <div class="attribution">
+        Challenge by{' '}
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
         </a>
-      </header>
-    </div>
+        . Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </Card>
   );
 };
 
