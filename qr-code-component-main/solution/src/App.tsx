@@ -1,25 +1,40 @@
-import type { Component, ParentComponent, children } from 'solid-js';
+import type { Component } from 'solid-js';
+import { ParentComponent } from 'solid-js';
 
 import styles from './App.module.css';
-import logo from './logo.svg';
+import qr from './assets/image-qr-code.png';
 
-const Card: ParentComponent = (props) => {
-  return <div class={styles.card}>{props.children}</div>;
+const Card: ParentComponent<{
+  header: string;
+  body: string;
+  img_url: string;
+}> = (props) => {
+  return (
+    <div class={styles.cardContainer}>
+      <div class={styles.cardContent}>
+        <img
+          class={styles.cardImage}
+          src={props.img_url}
+          alt="QR Code for Frontend Mentor"
+          srcset=""
+        />
+        <div class={styles.cardBody}>
+          <h2>{props.header}</h2>
+          <p>{props.body}</p>
+        </div>
+      </div>
+    </div>
+  );
 };
-
 const App: Component = () => {
   return (
-    <Card>
-      Improve your front-end skills by building projects Scan the QR code to
-      visit Frontend Mentor and take your coding skills to the next level
-      <div class="attribution">
-        Challenge by{' '}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-          Frontend Mentor
-        </a>
-        . Coded by <a href="#">Your Name Here</a>.
-      </div>
-    </Card>
+    <section>
+      <Card
+        header="Improve your front-end skills by building projects"
+        body="Scan the QR code to visit Frontend Mentor and take your coding skills to the next level"
+        img_url={qr}
+      ></Card>
+    </section>
   );
 };
 
