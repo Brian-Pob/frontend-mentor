@@ -1,40 +1,32 @@
 # Frontend Mentor - QR code component solution
 
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+- [Frontend Mentor - QR code component solution](#frontend-mentor---qr-code-component-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [Explanation](#explanation)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Screenshot](./images/sc.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Brian-Pob/frontend-mentor/tree/master/qr-code-component-main/solution)
 
 ## My process
 
@@ -42,62 +34,67 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Solid](https://solidjs.com/) - JS library
+- [Vite](https://vitejs.dev/) - JS bundler
+- [PNPM](https://pnpm.io/) - Package manager
+- [TypeScript](https://www.typescriptlang.org/) - JS superset
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+### Explanation
+
+A JS library/ framework like SolidJS and a JS bundler like Vite seem overkill for this project. And you'd be correct. I just wanted to try out a very basic SolidJS app with Vite. I will definitely use SolidJS again for other Frontend Mentor challenges simply because I want to learn it. Same with TypeScript. You could easily get by with just HTML and CSS for this project.
+
+I use pnpm because it's fast and I like it. You can use npm or yarn if you want.
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+SolidJS with TypeScript is pretty good. At the time of writing this I am just learning TypeScript.
 
-To see how you can add code snippets, see below:
+I learned that to use SolidJS components with TypeScript, I need to explicitly define the props type. Also, you can simply use `class` instead of `className` in SolidJS.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+```tsx
+import {ParentComponent} from 'solid-js';
+
+const CardComponent: ParentComponent<{header: string; body: string}> = (props) => {
+  return (
+    <div class="card">
+      <h2>{props.header}</h2>
+    </div>
+  );
+};
 ```
+
+Coming from React, I really like Solid because it feels very similar to React but it doesn't have all the unnecessary stuff that React has. I also like that it's very small and fast.
+
+On the topic of styling, I learned that having different border-radius values for a parent component and its children can look pretty nice.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.cardContainer {
+  min-height: 50%;
+  width: 350px;
+  background-color: var(--white);
+  border-radius: 20px;
+  filter: drop-shadow(0px 10px 10px #00000020);
+  text-align: center;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+.cardImage {
+  max-width: 100%;
+  border-radius: 10px;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+![Close up screenshot showing border radius](./images/sc2.png)
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I like what I've dont for this challenge. I want to expand it a little bit by either creating additional components with this style, utilizing this component in a larger app, or both
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [SolidJS Docs](https://solidjs.com/guides/typescript) - This is where I learned how to use SolidJS with TypeScript.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Me - [Github](https://github.com/Brian-Pob) - [Twitter](https://twitter.com/brianmpdotdev) - [LinkedIn](https://www.linkedin.com/in/Brian-Pob/)
 
 ## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
