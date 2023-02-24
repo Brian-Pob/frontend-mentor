@@ -21,6 +21,12 @@ If it's crossed out it means I've completed it. If it doesn't have a folder it m
 * ~~[Order Summary Component](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj)~~
 * [Single Price Grid Component](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc)
 
+## Journal
+
+### 2023-02-24
+
+An attempt to do something cool was made. I tried to make my app an SPA with Solid Router and have each route load a different set of styles. I knew that this would be ideal with a multi page app but I didn't realize it would be so difficult with an SPA. I realized that an app with this structure would not scale well with having to manage so many different style sets. I guess I learned a lot about what not to do `¯\_(ツ)_/¯`
+
 ## License
 
 Whatever Frontend Mentor uses lol.
