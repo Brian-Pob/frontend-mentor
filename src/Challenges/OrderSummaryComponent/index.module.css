@@ -12,15 +12,7 @@
   --osc-dark: hsl(var(--osc-dark-blue));
 }
 
-section.OrderSummaryComponent {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-main.OrderSummaryComponent {
+.OrderSummaryComponent {
   margin: 0;
   font-family: 'Red Hat Display', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -30,4 +22,9 @@ main.OrderSummaryComponent {
   background-image: url('assets/pattern-background-desktop.svg');
   background-repeat: no-repeat;
   background-size: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }

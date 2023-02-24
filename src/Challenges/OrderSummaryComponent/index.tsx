@@ -1,14 +1,14 @@
-import type { Component } from 'solid-js';
+import { Component, createEffect } from 'solid-js';
 import { Button, Card, PlanSelection } from './components';
-import styles from './App.module.css';
-import './index.css';
+
+import styles from './index.module.css';
 import image from './assets/illustration-hero.svg';
 import iconMusic from './assets/icon-music.svg';
 const OrderSummaryComponent: Component = () => {
   return (
     <>
-      <main class="OrderSummaryComponent">
-        <section class="OrderSummaryComponent">
+      <main class={styles.OrderSummaryComponent}>
+        <section>
           <Card
             header="Order Summary"
             body="You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!"
