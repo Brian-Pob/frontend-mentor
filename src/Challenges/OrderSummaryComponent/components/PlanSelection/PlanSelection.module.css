@@ -3,7 +3,8 @@
   min-width: 18rem;
   max-width: 18rem;
   grid-template-columns: 1fr 10fr 1fr;
-  background-color: hsl(var(--desaturated-blue) / 0.1);
+  background-color: hsl(var(--osc-bright-blue) / 0.1);
+  /* border: 0.125rem solid hsl(var(--osc-desaturated-blue) / 0.1); */
   border-radius: 0.5rem;
 }
 
@@ -43,5 +44,5 @@
 .PlanSelection > div > a {
   font-size: 0.8rem;
   font-weight: 400;
-  color: hsl(var(--bright-blue));
+  color: hsl(var(--osc-bright-blue));
 }

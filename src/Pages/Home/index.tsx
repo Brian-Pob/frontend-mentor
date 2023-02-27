@@ -8,9 +8,6 @@ const Home: Component = () => {
     <div class={styles.App}>
       <header class={styles.header}>
         <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
         <a
           class={styles.link}
           href="https://github.com/solidjs/solid"
@@ -18,6 +15,12 @@ const Home: Component = () => {
           rel="noopener noreferrer"
         >
           Learn Solid
+        </a>
+        <a class={styles.link} href="/OrderSummaryComponent">
+          Order Summary Component
+        </a>
+        <a class={styles.link} href="/QRCodeComponent">
+          QR Code Component
         </a>
       </header>
     </div>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
-:root {
+
+.OrderSummaryComponent {
   --osc-pale-blue: 225 100% 94%;
   --osc-bright-blue: 245 75% 52%;
   --osc-very-pale-blue: 225 100% 98%;
@@ -11,9 +12,7 @@
   --osc-primary: hsl(var(--osc-bright-blue));
   --osc-secondary: hsl(var(--osc-pale-blue));
   --osc-dark: hsl(var(--osc-dark-blue));
-}
 
-.OrderSummaryComponent {
   margin: 0;
   font-family: 'Red Hat Display', sans-serif;
   -webkit-font-smoothing: antialiased;
