@@ -1,12 +1,8 @@
 import type { Component } from 'solid-js';
 import { Routes, Route, A } from '@solidjs/router';
-import logo from './logo.svg';
-import styles from './App.module.css';
-import OrderSummaryComponent from './Challenges/OrderSummaryComponent';
-import QRCodeComponent from './Challenges/QRCodeComponent';
-import Home from './Pages/Home/';
-import Navbar from './components/Navbar';
-
+import { OrderSummaryComponent, QRCodeComponent } from './Challenges';
+import { Home } from './Pages';
+import { Navbar } from './components';
 const App: Component = () => {
   return (
     <>
