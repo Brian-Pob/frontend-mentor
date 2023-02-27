@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+.QRCodeComponent {
+  --qr-white: hsl(0, 0%, 100%);
+  --qr-light-gray: hsl(212, 45%, 89%);
+  --qr-grayish-blue: hsl(220, 15%, 55%);
+  --qr-dark-blue: hsl(218, 44%, 22%);
+
+  --qr-bg: var(--qr-light-gray);
+  --qr-header: var(--qr-dark-blue);
+  --qr-text: var(--qr-grayish-blue);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--qr-bg);
+}

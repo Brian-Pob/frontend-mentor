@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+.OrderSummaryComponent {
+  --osc-pale-blue: 225 100% 94%;
+  --osc-bright-blue: 245 75% 52%;
+  --osc-very-pale-blue: 225 100% 98%;
+  --osc-desaturated-blue: 224 23% 55%;
+  --osc-dark-blue: 223 47% 23%;
+
+  --osc-white: hsl(var(--osc-very-pale-blue));
+  --osc-text: hsl(var(--osc-desaturated-blue));
+  --osc-primary: hsl(var(--osc-bright-blue));
+  --osc-secondary: hsl(var(--osc-pale-blue));
+  --osc-dark: hsl(var(--osc-dark-blue));
+
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--osc-secondary);
+  background-image: url('assets/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
