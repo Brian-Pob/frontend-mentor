@@ -2,26 +2,27 @@ import type { Component } from 'solid-js';
 
 import logo from './logo.svg';
 import styles from './Home.module.css';
+import { A } from '@solidjs/router';
 
-const Home: Component = () => {
+const Home = () => {
   return (
     <div class={styles.App}>
       <header class={styles.header}>
         <img src={logo} class={styles.logo} alt="logo" />
-        <a
+        <A
           class={styles.link}
           href="https://github.com/solidjs/solid"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn Solid
-        </a>
-        <a class={styles.link} href="/OrderSummaryComponent">
+        </A>
+        <A class={styles.link} href="/OrderSummaryComponent">
           Order Summary Component
-        </a>
-        <a class={styles.link} href="/QRCodeComponent">
+        </A>
+        <A class={styles.link} href="/QRCodeComponent">
           QR Code Component
-        </a>
+        </A>
       </header>
     </div>
   );
