@@ -1,7 +1,7 @@
 .wrapper {
   display: block;
-  min-height: calc(100vh - 6rem);
-  height: calc(100vh - 6rem);
+  min-height: calc(100vh - 3rem);
+  height: calc(100vh - 3rem);
   /* https://stackoverflow.com/a/14752346/15911637 */
 }
 
