@@ -4,7 +4,7 @@ import logo from './logo.svg';
 
 const Home = () => {
   return (
-    <header class={styles.header}>
+    <main class={styles.App}>
       <img src={logo} class={styles.logo} alt="logo" />
       <A
         class={styles.link}
@@ -28,7 +28,7 @@ const Home = () => {
       <A class={styles.link} href="/QRCodeComponent">
         QR Code Component
       </A>
-    </header>
+    </main>
   );
 };
 
