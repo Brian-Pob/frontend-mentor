@@ -6,7 +6,7 @@ I want to learn more about different tools and technoligies for implementing CSS
 
 If you're looking at the structure of the project, you might notice that I have most of my components organized into their own folders with an `index.tsx` file. This is called a [barrel](https://youtu.be/b0IZo2Aho9Y?t=223). I like to use this pattern because it makes it easier to import components from other files. It also makes the file strucutre look cleaner IMO.
 
-Site is deployed for free on Netlify! https://solid-mentor.netlify.app
+Site is deployed for free on Netlify! <https://solid-mentor.netlify.app>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bbd7062b-3e8e-4ebf-bb5a-20b11cf542bd/deploy-status)](https://app.netlify.com/sites/solid-mentor/deploys?branch=production)
 
