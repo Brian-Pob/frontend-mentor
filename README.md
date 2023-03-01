@@ -49,7 +49,7 @@ Whatever Frontend Mentor uses lol.
 
 ### 2023-03-01
 
-Tried to use GPG keys.
+Tried to use GPG keys. Not going well
 
 ### 2023-02-27
 
