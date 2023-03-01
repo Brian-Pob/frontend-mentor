@@ -1,10 +1,11 @@
-import { ParentComponent, Show } from 'solid-js';
-import styles from './Card.module.css';
+import { ParentComponent, Show } from "solid-js";
+import styles from "./Card.module.css";
 
 const Card: ParentComponent<{
   header: string;
   body: string;
   img_url?: string;
+  isChild?: boolean;
 }> = (props) => {
   return (
     <div class={styles.cardContainer}>
@@ -13,13 +14,15 @@ const Card: ParentComponent<{
           class={styles.cardImage}
           src={props.img_url}
           alt="Illustration of a person listening to music."
-          srcset=""
         />
       </Show>
 
       <div class={styles.cardContent}>
         <div class={styles.cardBody}>
-          <h2>{props.header}</h2>
+          <Show when={props.isChild} fallback={<h1>{props.header}</h1>}>
+            <h2>{props.header}</h2>
+          </Show>
+
           <p>{props.body}</p>
         </div>
         {props.children}

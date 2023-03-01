@@ -19,7 +19,6 @@ const App: Component = () => {
             <Route path="/QRCodeComponent" element={<QRCodeComponent />} />
           </Routes>
         </div>
-        <Footer />
       </Router>
     </>
   );
