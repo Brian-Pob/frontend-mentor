@@ -21,7 +21,7 @@ export function BackButton({ text }: { text?: string }) {
   // Credit for solution:
   // https://bobbyhadz.com/blog/typescript-no-overload-matches-this-call
   return (
-    <button onClick={() => navigate(backPath())} class={s["back-button"]}>
+    <button onClick={() => navigate(-1)} class={s["back-button"]}>
       {text}
     </button>
   );

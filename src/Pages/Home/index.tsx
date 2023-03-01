@@ -1,6 +1,6 @@
-import { A } from '@solidjs/router';
-import styles from './Home.module.css';
-import logo from './logo.svg';
+import { A } from "@solidjs/router";
+import styles from "./Home.module.css";
+import logo from "./logo.svg";
 
 const Home = () => {
   return (
@@ -22,11 +22,8 @@ const Home = () => {
       >
         My GitHub Repo
       </A>
-      <A class={styles.link} href="/OrderSummaryComponent">
-        Order Summary Component
-      </A>
-      <A class={styles.link} href="/QRCodeComponent">
-        QR Code Component
+      <A class={styles.link} href="/Challenges">
+        Completed Challenges
       </A>
     </main>
   );
