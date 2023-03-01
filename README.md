@@ -47,6 +47,10 @@ Whatever Frontend Mentor uses lol.
 
 ## 📔 Journal
 
+### 2023-03-01
+
+Tried to use GPG keys.
+
 ### 2023-02-27
 
 So I was able to refactor the project into an SPA with Solid Router. I was able to get around issues with CSS variables in the document root by assigning the variables inside a class that is used by the `<main>` tag in each challenge. What I want to do next is make the app more modular by moving the components into a common components folder so that each challenge can reuse the same component code. The only difference will be where the styles are located. I am experimenting with CSS Modules and later on I also want to try TailwindCSS and CSS in JS.
