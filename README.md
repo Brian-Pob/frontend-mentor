@@ -47,6 +47,10 @@ Whatever Frontend Mentor uses lol.
 
 ## 📔 Journal
 
+### 2023-03-03
+
+Created the folder for the Single Price Grid component. For this one, I decided not to use Tailwind just yet. I decided to try adding an index.css file with a CSS reset. I recently learned about CSS resets and I think it's a cool concept. I'm still decideding what I'm going to have in the reset so I'll see where that goes.
+
 ### 2023-03-01
 
 Tried to use GPG keys. Not going well. One more time.
