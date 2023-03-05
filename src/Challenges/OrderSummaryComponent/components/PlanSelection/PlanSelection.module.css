@@ -1,21 +1,18 @@
 .PlanSelection {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   min-width: 18rem;
   max-width: 18rem;
-  grid-template-columns: 1fr 10fr 1fr;
   background-color: hsl(var(--osc-bright-blue) / 0.1);
   /* border: 0.125rem solid hsl(var(--osc-desaturated-blue) / 0.1); */
   border-radius: 0.5rem;
+  padding: 1rem;
 }
 
-.PlanSelection > * {
-  display: grid;
-  align-items: center;
-  padding: 1rem 0.75rem;
-}
-
-.image {
-  /* padding: 0; */
+.PlanSelection > *:nth-child(2) {
+  margin-right: auto;
 }
 
 .info {
@@ -32,13 +29,11 @@
 .info > h3 {
   font-size: 1rem;
   font-weight: 700;
-  margin-top: 0.5rem;
 }
 
 .info > p {
   font-size: 0.75rem;
   font-weight: 400;
-  margin-top: -2rem;
 }
 
 .PlanSelection > div > a {

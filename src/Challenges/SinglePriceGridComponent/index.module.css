@@ -1,0 +1,137 @@
+/* Karla 400 700 Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+.SinglePriceGridComponent {
+  --cyan: 179 62% 43%;
+  --bright-yellow: 71 73% 54%;
+  --light-gray: 204 47% 93%;
+  --grayish-blue: 218 22% 67%;
+
+  --color-primary: hsl(var(--cyan));
+  --color-secondary: hsl(var(--bright-yellow));
+  --color-bg-tertiary: hsl(var(--grayish-blue));
+  --color-bg-primary: hsl(var(--light-gray));
+
+  font-family: "Karla", sans-serif;
+  background-color: var(--color-bg-primary);
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: var(--color-primary);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 52rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "header header"
+    "action info";
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header"
+      "action"
+      "info";
+  }
+
+  .container > * {
+    height: min-content;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: header;
+  padding: 2rem;
+  background-color: white;
+}
+
+.header > h2 {
+  color: var(--color-secondary);
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--color-primary);
+}
+
+.action > div {
+  padding-bottom: 2rem;
+}
+
+.price {
+  display: inline;
+}
+
+.signupBtn {
+  display: inline;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: var(--color-secondary);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  line-height: 2.2;
+
+  filter: drop-shadow(0px 10px 10px #00000020);
+  transition: all 0.2s ease-in-out;
+}
+
+.signupBtn:hover {
+  background-color: hsl(var(--bright-yellow) / 0.8);
+  /* transform: scale(1.05); */
+  transition: all 0.2s ease-in-out;
+}
+
+.signupBtn:active {
+  background-color: hsl(var(--bright-yellow) / 0.5);
+  transform: scale(1);
+  transition: all 0.1s ease-in-out;
+}
+
+.signupBtn:focus {
+  outline: 5px auto var(--color-secondary);
+  outline-offset: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 2rem 2rem;
+  /* Make background-color slightly lighter than color-primary */
+  background-color: hsl(var(--cyan) / 0.8);
+}
+
+.action,
+.info {
+  color: white;
+}
+
+ul {
+  padding: 0;
+}

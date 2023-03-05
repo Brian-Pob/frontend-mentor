@@ -25,6 +25,11 @@
   padding: 10px 0px 20px;
 }
 
+.cardBody > h1,
+h2 {
+  margin-block: 0.83em;
+}
+
 .cardBody > p {
   width: 80%;
   margin: 0 auto;
