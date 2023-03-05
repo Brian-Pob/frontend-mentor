@@ -12,6 +12,11 @@
   --color-bg-primary: hsl(var(--light-gray));
 
   font-family: "Karla", sans-serif;
+  background-color: var(--color-bg-primary);
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -19,15 +24,31 @@ h1 {
 }
 
 .container {
+  margin: 0 auto;
+  max-width: 52rem;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    "card"
-    "card" "card";
+    "header header"
+    "action info";
   padding: 2rem;
-  background-color: var(--color-bg-primary);
   border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header"
+      "action"
+      "info";
+  }
+
+  .container > * {
+    height: min-content;
+  }
 }
 
 .header {
@@ -35,6 +56,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  grid-area: header;
   padding: 2rem;
   background-color: white;
 }
@@ -50,6 +72,10 @@ h1 {
   justify-content: center;
   padding: 2rem;
   background-color: var(--color-primary);
+}
+
+.action > div {
+  padding-bottom: 2rem;
 }
 
 .price {
@@ -75,7 +101,7 @@ h1 {
 
 .signupBtn:hover {
   background-color: hsl(var(--bright-yellow) / 0.8);
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   transition: all 0.2s ease-in-out;
 }
 
@@ -83,6 +109,12 @@ h1 {
   background-color: hsl(var(--bright-yellow) / 0.5);
   transform: scale(1);
   transition: all 0.1s ease-in-out;
+}
+
+.signupBtn:focus {
+  outline: 5px auto var(--color-secondary);
+  outline-offset: 5px;
+  transition: all 0.2s ease-in-out;
 }
 
 .info {

@@ -1,15 +1,14 @@
+import { A, Route, Router, Routes } from "@solidjs/router";
 import type { Component } from "solid-js";
-import { Routes, Route, A, Router } from "@solidjs/router";
-import { OrderSummaryComponent, QRCodeComponent, SinglePriceGrid } from "./Challenges";
-import { Home, Challenges } from "./Pages";
-import { Navbar, Footer } from "./components";
 import s from "./App.module.css";
+import { OrderSummaryComponent, QRCodeComponent, SinglePriceGrid } from "./Challenges";
+import { Challenges, Home } from "./Pages";
+import { Footer, Navbar } from "./components";
 const App: Component = () => {
   return (
     <>
       <Router>
         <Navbar />
-        <div class={s.wrapper}>
           <Routes>
             <Route path="/" element={Home}></Route>
             <Route path="/Challenges">
@@ -19,7 +18,6 @@ const App: Component = () => {
               <Route path="/SinglePriceGrid" element={<SinglePriceGrid />} />
             </Route>
           </Routes>
-        </div>
       </Router>
     </>
   );

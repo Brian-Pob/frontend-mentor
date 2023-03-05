@@ -6,6 +6,7 @@
 
 .App {
   background-color: #282c34;
+  height: 100%;
   height: fill-available;
   display: flex;
   flex-direction: column;
