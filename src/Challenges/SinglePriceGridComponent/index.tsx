@@ -14,13 +14,15 @@ const SinglePriceGrid = () => {
         </div>
         <div class={s.action}>
           <h3>Monthly Subscription</h3>
-          <h4>$29</h4> <span>per month</span>
-          <p>Full access for less than $1 a day</p>
-          <button>Sign Up</button>
+          <div>
+            <h2 class={s.price}>$29</h2> <span>per month</span>
+            <p>Full access for less than $1 a day</p>
+          </div>
+          <button class={s.signupBtn}>Sign Up</button>
         </div>
         <div class={s.info}>
           <h3>Why Us</h3>
-          <ul>
+          <ul role="list">
             <li>Tutorials by industry experts</li>
             <li>Peer & expert code review</li>
             <li>Coding exercises</li>

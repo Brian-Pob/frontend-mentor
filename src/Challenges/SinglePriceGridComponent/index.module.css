@@ -1,13 +1,25 @@
+/* Karla 400 700 Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 .SinglePriceGridComponent {
-  --cyan: 179 62 43;
-  --bright-yellow: 71 73 54;
-  --light-gray: 204 47 93;
-  --grayish-blue: 218 22 67;
+  --cyan: 179 62% 43%;
+  --bright-yellow: 71 73% 54%;
+  --light-gray: 204 47% 93%;
+  --grayish-blue: 218 22% 67%;
 
   --color-primary: hsl(var(--cyan));
   --color-secondary: hsl(var(--bright-yellow));
-  --color-tertiary: hsl(var(--light-gray));
-  --color-bg: hsl(var(--grayish-blue));
+  --color-bg-tertiary: hsl(var(--grayish-blue));
+  --color-bg-primary: hsl(var(--light-gray));
+
+  font-family: "Karla", sans-serif;
+}
+
+h1 {
+  color: var(--color-primary);
+}
+
+h2 {
+  color: var(--color-secondary);
 }
 
 .container {
@@ -17,9 +29,8 @@
   grid-template-areas:
     "card"
     "card" "card";
-  gap: 2rem;
   padding: 2rem;
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-primary);
   border-radius: 0.5rem;
 }
 
@@ -29,26 +40,43 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: var(--color-primary);
-  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: white;
 }
 
 .action {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   padding: 2rem;
+  background-color: var(--color-primary);
+}
+
+.price {
+  display: inline;
+}
+
+.signupBtn {
+  display: inline;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
   background-color: var(--color-secondary);
-  border-radius: 0 0 0.5rem 0.5rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  padding: 2rem;
-  background-color: var(--color-tertiary);
-  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 2rem 2rem;
+  background-color: var(--color-primary);
+}
+
+ul {
+  padding: 0;
 }
