@@ -22,7 +22,7 @@
   background-image: url("assets/pattern-background-desktop.svg");
   background-repeat: no-repeat;
   background-size: 100%;
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
