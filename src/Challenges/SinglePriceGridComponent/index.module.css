@@ -60,12 +60,29 @@ h2 {
   display: inline;
   padding: 0.5rem 1rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   background-color: var(--color-secondary);
   color: white;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
+  width: 100%;
+  line-height: 2.2;
+
+  filter: drop-shadow(0px 10px 10px #00000020);
+  transition: all 0.2s ease-in-out;
+}
+
+.signupBtn:hover {
+  background-color: hsl(var(--bright-yellow) / 0.8);
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.signupBtn:active {
+  background-color: hsl(var(--bright-yellow) / 0.5);
+  transform: scale(1);
+  transition: all 0.1s ease-in-out;
 }
 
 .info {
@@ -74,7 +91,13 @@ h2 {
   align-items: start;
   justify-content: center;
   padding: 2rem 2rem;
-  background-color: var(--color-primary);
+  /* Make background-color slightly lighter than color-primary */
+  background-color: hsl(var(--cyan) / 0.8);
+}
+
+.action,
+.info {
+  color: white;
 }
 
 ul {
