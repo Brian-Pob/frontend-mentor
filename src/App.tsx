@@ -1,6 +1,6 @@
 import type { Component } from "solid-js";
 import { Routes, Route, A, Router } from "@solidjs/router";
-import { OrderSummaryComponent, QRCodeComponent } from "./Challenges";
+import { OrderSummaryComponent, QRCodeComponent, SinglePriceGrid } from "./Challenges";
 import { Home, Challenges } from "./Pages";
 import { Navbar, Footer } from "./components";
 import s from "./App.module.css";
@@ -16,6 +16,7 @@ const App: Component = () => {
               <Route path="/" element={Challenges} />
               <Route path="/OrderSummaryComponent" element={<OrderSummaryComponent />} />
               <Route path="/QRCodeComponent" element={<QRCodeComponent />} />
+              <Route path="/SinglePriceGrid" element={<SinglePriceGrid />} />
             </Route>
           </Routes>
         </div>

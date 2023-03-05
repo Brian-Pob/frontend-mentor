@@ -12,6 +12,9 @@ const Challenges = () => {
       <A class={styles.link} href="/Challenges/QRCodeComponent">
         QR Code Component
       </A>
+      <A class={styles.link} href="/Challenges/SinglePriceGrid">
+        Single Price Grid Component
+      </A>
     </main>
   );
 };

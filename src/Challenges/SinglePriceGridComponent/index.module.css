@@ -1,0 +1,54 @@
+.SinglePriceGridComponent {
+  --cyan: 179 62 43;
+  --bright-yellow: 71 73 54;
+  --light-gray: 204 47 93;
+  --grayish-blue: 218 22 67;
+
+  --color-primary: hsl(var(--cyan));
+  --color-secondary: hsl(var(--bright-yellow));
+  --color-tertiary: hsl(var(--light-gray));
+  --color-bg: hsl(var(--grayish-blue));
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "card"
+    "card" "card";
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--color-bg);
+  border-radius: 0.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--color-primary);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--color-secondary);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--color-tertiary);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
