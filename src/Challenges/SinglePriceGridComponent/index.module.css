@@ -111,7 +111,7 @@ h1 {
   transition: all 0.1s ease-in-out;
 }
 
-.signupBtn:focus {
+.signupBtn:focus-visible {
   outline: 5px auto var(--color-secondary);
   outline-offset: 5px;
   transition: all 0.2s ease-in-out;
