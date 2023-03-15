@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </head>
+  <body class="h-screen">
+    <main class="flex h-full items-center justify-center bg-blue-200">
+      <div
+        class="mx-4 flex aspect-[3/5] min-w-[22rem] max-w-2xl flex-col overflow-hidden rounded-lg bg-white shadow-lg md:aspect-auto md:flex-row"
+      >
+        <img
+          class="h-56 w-full object-center md:max-w-[16rem] md:h-auto"
+          src="./images/drawers.jpg"
+          alt="green drawers"
+        />
+        <div class="flex-1 flex flex-col" x-data="{open: false}">
+          <!-- Start text content -->
+          <div class="px-6 py-7">
+            <h1 class="mb-4 text-xl font-semibold text-gray-700">
+              I learned that Tailwind resets the font-size of text elements, including headings.
+            </h1>
+            <p class="text-base text-gray-700">
+              This means that you need to manually set the font-size of headings if you want them to
+              be larger than the default.
+            </p>
+          </div>
+          <!-- End text content -->
+
+          <!-- Start social bar -->
+          <div
+            x-bind:class="! open ? 'mt-auto flex items-center justify-between min-w-full px-6 py-4' : 'mt-auto flex items-center justify-between min-w-full px-6 py-4 bg-blue-400 '"
+          >
+            <!-- Start profile -->
+            <div class="flex items-center" x-show="!open">
+              <img
+                class="mr-4 h-10 w-10 rounded-full"
+                src="./images/avatar-michelle.jpg"
+                alt="Avatar of Michelle Appleton"
+              />
+              <div class="text-sm">
+                <p class="leading-none text-gray-900">Michaelle Appleton</p>
+                <p class="text-gray-600">March 9, 2023</p>
+              </div>
+            </div>
+            <!-- End profile -->
+
+            <!-- Start share -->
+            <div class="flex items-center justify-between" x-show="open">
+              <h3 class="text-white font-semibold mr-4">SHARE</h3>
+              <div class="flex items-center justify-between space-x-4">
+                <a href="#">
+                  <img src="./images/icon-facebook.svg" alt="facebook icon" />
+                </a>
+                <a href="#">
+                  <img src="./images/icon-twitter.svg" alt="twitter icon" />
+                </a>
+                <a href="#">
+                  <img src="./images/icon-pinterest.svg" alt="pinterest icon" />
+                </a>
+              </div>
+            </div>
+
+            <button
+              class="transition:scale rounded-full bg-blue-200 py-4 px-4 font-bold text-white shadow-xl duration-300 hover:scale-125 hover:bg-blue-400"
+              x-on:click="open = !open"
+            >
+              <img src="./images/icon-share.svg" alt="share icon" />
+            </button>
+          </div>
+          <!-- End social bar -->
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
