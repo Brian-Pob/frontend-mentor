@@ -9,17 +9,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
-  <body class="h-screen">
-    <main class="flex h-full items-center justify-center bg-blue-200">
+  <body class="grid place-items-center overflow-y-scroll bg-blue-200">
+    <main class="">
       <div
-        class="mx-4 flex aspect-[3/5] min-w-[22rem] max-w-2xl flex-col overflow-hidden rounded-lg bg-white shadow-lg md:aspect-auto md:flex-row"
+        class="mx-4 flex min-w-[250px] max-w-md flex-col rounded-lg bg-white shadow-lg sm:min-h-[300px] sm:max-w-2xl sm:flex-row"
       >
-        <img
-          class="h-56 w-full object-center md:max-w-[16rem] md:h-auto"
-          src="./images/drawers.jpg"
-          alt="green drawers"
-        />
-        <div class="flex-1 flex flex-col" x-data="{open: false}">
+        <div class="aspect-auto w-full rounded-t-lg sm:max-w-[30%] sm:rounded-l-lg">
+          <img
+            class="h-full rounded-t-lg object-cover object-center sm:rounded-l-lg sm:rounded-tr-none"
+            src="./images/drawers.jpg"
+            alt="green drawers"
+          />
+        </div>
+        <div class="flex flex-1 flex-col" x-data="{open: false}">
           <!-- Start text content -->
           <div class="px-6 py-7">
             <h1 class="mb-4 text-xl font-semibold text-gray-700">
@@ -52,7 +54,7 @@
 
             <!-- Start share -->
             <div class="flex items-center justify-between" x-show="open">
-              <h3 class="text-white font-semibold mr-4">SHARE</h3>
+              <h3 class="mr-4 font-semibold text-white">SHARE</h3>
               <div class="flex items-center justify-between space-x-4">
                 <a href="#">
                   <img src="./images/icon-facebook.svg" alt="facebook icon" />
