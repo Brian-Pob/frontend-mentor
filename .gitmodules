@@ -1,0 +1,3 @@
+[submodule "other/article-preview"]
+	path = other/article-preview
+	url = git@github.com:Brian-Pob/article-preview.git
