@@ -52,8 +52,6 @@ For the social icons, you can use a font icon library. Some suggestions can be f
   --gray-400: hsl(0, 0%, 59%);
 
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: 300;
-  font-size: 20px;
   color: var(--blue-900);
   min-height: 100%;
 }
