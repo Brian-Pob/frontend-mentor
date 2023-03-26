@@ -1,6 +1,9 @@
 import s from "./index.module.css";
 
 const SinglePriceGrid = () => {
+  const handleClick = () => {
+    console.log("clicked");
+  };
   return (
     <main class={s.SinglePriceGridComponent}>
       <div class={s.container}>
@@ -18,7 +21,7 @@ const SinglePriceGrid = () => {
             <h2 class={s.price}>$29</h2> <span>per month</span>
             <p>Full access for less than $1 a day</p>
           </div>
-          <button class={s.signupBtn}>Sign Up</button>
+          <button class={s.signupBtn} onClick={handleClick}>Sign Up</button>
         </div>
         <div class={s.info}>
           <h3>Why Us</h3>

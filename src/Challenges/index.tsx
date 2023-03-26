@@ -1,5 +1,6 @@
-import OrderSummaryComponent from "./OrderSummaryComponent";
-import QRCodeComponent from "./QRCodeComponent";
-import SinglePriceGrid from "./SinglePriceGridComponent";
+import OrderSummaryComponent from './OrderSummaryComponent';
+import Ping from './PingComingSoonPage';
+import QRCodeComponent from './QRCodeComponent';
+import SinglePriceGrid from './SinglePriceGridComponent';
 
-export { OrderSummaryComponent, QRCodeComponent, SinglePriceGrid };
+export { OrderSummaryComponent, Ping, QRCodeComponent, SinglePriceGrid };

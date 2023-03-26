@@ -1,5 +1,5 @@
 /* Karla 400 700 Google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 .SinglePriceGridComponent {
   --cyan: 179 62% 43%;
   --bright-yellow: 71 73% 54%;
@@ -11,7 +11,7 @@
   --color-bg-tertiary: hsl(var(--grayish-blue));
   --color-bg-primary: hsl(var(--light-gray));
 
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   background-color: var(--color-bg-primary);
   min-height: 100%;
   display: flex;
@@ -30,8 +30,8 @@ h1 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    "header header"
-    "action info";
+    'header header'
+    'action info';
   padding: 2rem;
   border-radius: 0.5rem;
 }
@@ -41,9 +41,9 @@ h1 {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
     grid-template-areas:
-      "header"
-      "action"
-      "info";
+      'header'
+      'action'
+      'info';
   }
 
   .container > * {
@@ -54,7 +54,7 @@ h1 {
 .header {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   grid-area: header;
   padding: 2rem;
@@ -68,7 +68,7 @@ h1 {
 .action {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   padding: 2rem;
   background-color: var(--color-primary);
@@ -111,7 +111,7 @@ h1 {
   transition: all 0.1s ease-in-out;
 }
 
-.signupBtn:focus {
+.signupBtn:focus-visible {
   outline: 5px auto var(--color-secondary);
   outline-offset: 5px;
   transition: all 0.2s ease-in-out;
@@ -120,7 +120,7 @@ h1 {
 .info {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   padding: 2rem 2rem;
   /* Make background-color slightly lighter than color-primary */

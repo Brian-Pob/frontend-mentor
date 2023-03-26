@@ -1,6 +1,6 @@
-import { A } from "@solidjs/router";
-import styles from "./index.module.css";
-import logo from "../../assets/favicon.svg";
+import { A } from '@solidjs/router';
+import logo from '../../assets/favicon.svg';
+import styles from './index.module.css';
 
 const Challenges = () => {
   return (
@@ -14,6 +14,12 @@ const Challenges = () => {
       </A>
       <A class={styles.link} href="/Challenges/SinglePriceGrid">
         Single Price Grid Component
+      </A>
+      <A class={styles.link} href="https://cheerful-pastelito-dd1736.netlify.app/" target="_blank">
+        Article Preview Component
+      </A>
+      <A class={styles.link} href="/Challenges/PingComingSoonPage">
+        Ping Coming Soon Page
       </A>
     </main>
   );
