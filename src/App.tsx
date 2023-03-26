@@ -16,7 +16,6 @@ const App: Component = () => {
             <Route path="/OrderSummaryComponent" element={<c.OrderSummaryComponent />} />
             <Route path="/QRCodeComponent" element={<c.QRCodeComponent />} />
             <Route path="/SinglePriceGrid" element={<c.SinglePriceGrid />} />
-            <Route path="/ArticlePreview" element={<c.ArticlePreviewComponent />} />
             <Route path="/PingComingSoonPage" element={<c.Ping />} />
           </Route>
         </Routes>
