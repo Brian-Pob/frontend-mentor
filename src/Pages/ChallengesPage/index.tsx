@@ -1,26 +1,26 @@
 import { A } from '@solidjs/router';
-import logo from '../../assets/favicon.svg';
+import { For } from 'solid-js';
+import logo from '../../assets/favicon.png';
 import styles from './index.module.css';
 
 const Challenges = () => {
+  const links = {
+    OrderSummaryComponent: '/Challenges/OrderSummaryComponent',
+    QRCodeComponent: '/Challenges/QRCodeComponent',
+    SinglePriceGrid: '/Challenges/SinglePriceGrid',
+    ArticlePreviewComponent: 'https://cheerful-pastelito-dd1736.netlify.app/',
+    PingComingSoonPage: '/Challenges/PingComingSoonPage',
+  };
   return (
     <main class={styles.App}>
       <img src={logo} class={styles.logo} alt="logo" />
-      <A class={styles.link} href="/Challenges/OrderSummaryComponent">
-        Order Summary Component
-      </A>
-      <A class={styles.link} href="/Challenges/QRCodeComponent">
-        QR Code Component
-      </A>
-      <A class={styles.link} href="/Challenges/SinglePriceGrid">
-        Single Price Grid Component
-      </A>
-      <A class={styles.link} href="https://cheerful-pastelito-dd1736.netlify.app/" target="_blank">
-        Article Preview Component
-      </A>
-      <A class={styles.link} href="/Challenges/PingComingSoonPage">
-        Ping Coming Soon Page
-      </A>
+      <For each={Object.entries(links)}>
+        {([name, link]) => (
+          <A href={link} class={styles.link}>
+            {name}
+          </A>
+        )}
+      </For>
     </main>
   );
 };
