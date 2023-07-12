@@ -1,6 +1,6 @@
-import { A } from "@solidjs/router";
-import styles from "./Home.module.css";
-import logo from "./logo.svg";
+import { A } from '@solidjs/router';
+import styles from './Home.module.css';
+import logo from './logo.svg';
 
 const Home = () => {
   return (
@@ -25,6 +25,7 @@ const Home = () => {
       <A class={styles.link} href="/Challenges">
         Completed Challenges
       </A>
+      update
     </main>
   );
 };
