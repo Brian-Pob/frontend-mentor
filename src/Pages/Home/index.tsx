@@ -25,7 +25,7 @@ const Home = () => {
       <A class={styles.link} href="/Challenges">
         Completed Challenges
       </A>
-      Hello David
+      update
     </main>
   );
 };
