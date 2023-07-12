@@ -1,33 +1,33 @@
 import { Component } from 'solid-js';
 import image from './assets/illustration-dashboard.png';
 import logo from './assets/logo.svg';
-import s from './index.module.css';
+import s from './index.module.scss';
 
 const Ping: Component<{}> = (props) => {
   return (
     <main class={s.main}>
       <div class="welcomeContent">
-        <div class="logo">
+        <div class={s.logoContainer}>
           <img src={logo} alt="logo" />
         </div>
-        <div class="welcomeText">
+        <div class={s.welcomeText}>
           <h1>
             We are launching <strong>soon!</strong>
           </h1>
-          <p>Subscribe and get notified.</p>
+          <p>Subscribe and get notified</p>
         </div>
       </div>
-      <div class="emailInput">
+      <div class={s.emailInput}>
         <form action="#">
           <input type="email" placeholder="Your email address..." />
           <button type="submit">Notify Me</button>
         </form>
       </div>
-      <div class="previewImage">
+      <div class={s.previewImage}>
         <img src={image} alt="Illustration of PING dashboard" />
       </div>
-      <div class="footerContent">
-        <div class="socialMedia">
+      <div class={s.footerContent}>
+        <div class={s.socialMedia}>
           <a href="https://twitter.com/brianmpdotdev">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
               <path fill="none" d="M0 0h24v24H0z" />
@@ -48,7 +48,7 @@ const Ping: Component<{}> = (props) => {
           </a>
         </div>
         <div class="footerText">
-          <p>&copy; Copyright Ping. All rights reserved.</p>
+          <p>&copy; Copyright Nobody. No rights reserved.</p>
         </div>
       </div>
     </main>
