@@ -1,0 +1,143 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Blue: hsl(223, 87%, 63%)
+
+### Secondary
+
+- Pale Blue: hsl(223, 100%, 88%)
+- Light Red: hsl(354, 100%, 66%)
+
+### Neutral
+
+- Gray: hsl(0, 0%, 59%)
+- Very Dark Blue: hsl(209, 33%, 12%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 20px
+
+### Fonts
+
+- Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
+- Weights: 300, 600, 700
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+.main {
+  --blue-300: hsl(223 100% 88%);
+  --blue-400: hsl(223, 87%, 63%);
+  --blue-900: hsl(209, 33%, 12%);
+  --red-400: hsl(354, 100%, 66%);
+  --gray-400: hsl(0, 0%, 59%);
+
+  font-family: 'Libre Franklin', sans-serif;
+  color: var(--blue-900);
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 2rem;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomeText{
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+
+  > h1{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-left: 1rem;
+  }
+
+  > p {
+    text-align: center;
+  }
+}
+
+.emailInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+
+  > form {
+    display: flex;
+    flex-direction: row;
+
+    > input {
+      width: clamp(20rem, 70%, 30rem);
+      padding: 0rem 1rem;
+      border: 2px solid var(--gray-400);
+      border-radius: 3rem;
+      line-height: 1;
+    }
+
+    > button {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 3rem;
+      background-color: var(--blue-400);
+      color: white;
+      font-weight: 700;
+      margin-left: 1rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.previewImage {
+  max-width: 50%;
+  height: auto;
+  padding-top: 6rem;
+}
+
+.footerContent {
+  // stick to bottom
+  margin-top: auto;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
