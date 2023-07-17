@@ -1,4 +1,4 @@
-import styles from './Button.module.css';
+import styles from './Button.module.scss';
 import { ParentComponent } from 'solid-js';
 
 const Button: ParentComponent<{ text: string; btnType?: string }> = (props) => {
