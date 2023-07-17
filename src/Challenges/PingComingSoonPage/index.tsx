@@ -20,7 +20,9 @@ const Ping: Component<{}> = (props) => {
       <div class={s.emailInput}>
         <form action="#">
           <input type="email" placeholder="Your email address..." />
-          <button type="submit">Notify Me</button>
+          <button class={s['btn-fancy']} type="submit">
+            Notify Me
+          </button>
         </form>
       </div>
       <div class={s.previewImage}>

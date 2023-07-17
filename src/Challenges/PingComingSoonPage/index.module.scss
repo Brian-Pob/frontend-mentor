@@ -43,7 +43,7 @@ For the social icons, you can use a font icon library. Some suggestions can be f
 - [IcoMoon](https://icomoon.io)
 - [Ionicons](https://ionicons.com)
 */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;500;600;700&display=swap');
 .main {
   --blue-300: hsl(223 100% 88%);
   --blue-400: hsl(223, 87%, 63%);
@@ -69,15 +69,14 @@ For the social icons, you can use a font icon library. Some suggestions can be f
   align-items: center;
 }
 
-.welcomeText{
+.welcomeText {
   display: flex;
   flex-direction: column;
   margin: 1.5rem 0;
 
-  > h1{
+  > h1 {
     font-size: 2rem;
     font-weight: 300;
-    margin-left: 1rem;
   }
 
   > p {
@@ -98,10 +97,12 @@ For the social icons, you can use a font icon library. Some suggestions can be f
 
     > input {
       width: clamp(20rem, 70%, 30rem);
-      padding: 0rem 1rem;
-      border: 2px solid var(--gray-400);
+      padding: 1rem 2rem;
+      border: 2px solid var(--blue-400);
+      color: var(--blue-400);
       border-radius: 3rem;
       line-height: 1;
+      font-weight: 500;
     }
 
     > button {
@@ -113,6 +114,17 @@ For the social icons, you can use a font icon library. Some suggestions can be f
       font-weight: 700;
       margin-left: 1rem;
       white-space: nowrap;
+      cursor: pointer;
+    }
+
+    // flex direction column when on mobile
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      > button {
+        margin-top: 1rem;
+        margin-left: 0;
+      }
     }
   }
 }
@@ -123,6 +135,16 @@ For the social icons, you can use a font icon library. Some suggestions can be f
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+
+  > a {
+    margin: 0 1rem;
+    border: 1px solid #00000022;
+    border-radius: 50%;
+    padding: 0.5rem;
+    > svg {
+      fill: var(--blue-400);
+    }
+  }
 }
 
 .previewImage {
@@ -134,10 +156,31 @@ For the social icons, you can use a font icon library. Some suggestions can be f
 .footerContent {
   // stick to bottom
   margin-top: auto;
-  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
+
+  p {
+    margin: 2rem 0;
+    font-weight: lighter;
+  }
+}
+
+.btn-fancy {
+  transition: filter 0.2s ease-in-out, scale 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    filter: drop-shadow(0 5px 7px #000000a0);
+    transition: filter 0.2s ease-in-out, scale 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    scale: 1.05;
+  }
+
+  &:active {
+    filter: none;
+    box-shadow: inset 0 0 1.5rem #000000a0;
+    transition: filter 0.2s ease-in-out, scale 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+    scale: 1;
+  }
 }
