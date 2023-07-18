@@ -10,9 +10,9 @@ const App: Component = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={Home}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/Challenges">
-            <Route path="/" element={Challenges} />
+            <Route path="/" element={<Challenges />} />
             <Route path="/OrderSummaryComponent" element={<c.OrderSummaryComponent />} />
             <Route path="/QRCodeComponent" element={<c.QRCodeComponent />} />
             <Route path="/SinglePriceGrid" element={<c.SinglePriceGrid />} />
