@@ -1,6 +1,5 @@
 import { A, Route, Router, Routes } from '@solidjs/router';
 import type { Component } from 'solid-js';
-import s from './App.module.css';
 import * as c from './Challenges';
 import { Challenges, Home } from './Pages';
 import { Footer, Navbar } from './components';

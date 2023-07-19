@@ -2,35 +2,41 @@ import s from './ChallengeCard.module.scss';
 import { A } from '@solidjs/router';
 import { Challenge as ChallengeDetails } from '../../../types';
 import { For, Show } from 'solid-js';
-
+import { TbBrandGithub } from 'solid-icons/tb';
+import image from '../../assets/order_summary.webp';
+import FemIcon from './femIcon';
 const ChallengeCard = (props: ChallengeDetails) => {
   return (
     <div class={s['challenge-card']}>
       <div class={s['card-content']}>
-        <h3>{props.name}</h3>
-        <p>{props.description}</p>
-        <div class={s['challenge-card__tags']}>
-          <For each={props.tags}>
-            {(tag, index) => (
-              <Show when={index() < props.tags.length - 1} fallback={<span>{tag}</span>}>
-                <span>{tag}, </span>
-              </Show>
-            )}
-          </For>
+        <div class={s['card-info']}>
+          <h3 aria-label={props.name}>{props.name}</h3>
+          <p>{props.description}</p>
+          <div class={s['tags']}>
+            <p>
+              <For each={props.tags}>
+                {(tag, index) => (
+                  <Show when={index() < props.tags.length - 1} fallback={tag}>
+                    {tag + ', '}
+                  </Show>
+                )}
+              </For>
+            </p>
+          </div>
         </div>
-        <div>
+        <div class={s['links']}>
           <A href={props.path}>View Challenge</A>
-        </div>
-        <div class={s['challenge-card__links']}>
-          <A href={props.repoUrl} target="_blank" rel="noopener noreferrer">
-            View on Github
-          </A>
-          <A href={props.fmUrl} target="_blank" rel="noopener noreferrer">
-            View on Frontend Mentor
-          </A>
+          <div class={s['external']}>
+            <A href={props.repoUrl} target="_blank" rel="noopener noreferrer">
+              <TbBrandGithub />
+            </A>
+            <A href={props.fmUrl} target="_blank" rel="noopener noreferrer" class={s['fem-logo']}>
+              <FemIcon />
+            </A>
+          </div>
         </div>
       </div>
-      <img src="https://picsum.photos/300" alt="Placeholder image" />
+      <img src={image} alt="Placeholder image" />
     </div>
   );
 };

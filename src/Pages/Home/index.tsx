@@ -10,8 +10,9 @@ const challenges: Challenge[] = [
   {
     name: 'Order Summary Component',
     path: '/Challenges/OrderSummaryComponent',
-    description: 'A simple order summary component',
-    tags: ['HTML', 'CSS'],
+    description:
+      'A simple order summary component. Using CSS Modules with SCSS for styling. I also implemented a nice button animation using CSS transitions.',
+    tags: ['SolidJS', 'CSS Modules', 'SCSS', 'CSS Transitions'],
     repoUrl:
       'https://github.com/Brian-Pob/frontend-mentor/tree/production/src/Challenges/OrderSummaryComponent',
     fmUrl:
@@ -21,34 +22,38 @@ const challenges: Challenge[] = [
 
 const Home = () => {
   return (
-    <main class={styles.App}>
-      <div class="hero">
-        <h1 class={styles.title}>Frontend Mentor Challenges</h1>
-        <p class={styles.description}>
-          A collection of Frontend Mentor challenges that I completed using various tools and
-          frameworks.
-        </p>
-        <div class="links">
-          <A class={styles.link} href="/Challenges">
-            View Completed Challenges
-          </A>
-          <A
-            class={styles.link}
-            href="https://github.com/Brian-Pob/frontend-mentor/tree/master"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Github Repo
-          </A>
-        </div>
-      </div>
-      <div>
-        <h2 class={styles.subtitle}>Challenges</h2>
-        <div class={styles['challenge-list']}>
-          <For each={challenges}>{(challenge) => <ChallengeCard {...challenge} />}</For>
-        </div>
-      </div>
-    </main>
+    <>
+      <main class={styles.App}>
+        <section>
+          <div class="hero">
+            <h1 class={styles.title}>Frontend Mentor Challenges</h1>
+            <p class={styles.description}>
+              A collection of Frontend Mentor challenges that I completed using various tools and
+              frameworks.
+            </p>
+            <div class="links">
+              <A class={styles.link} href="/Challenges">
+                View Completed Challenges
+              </A>
+              <A
+                class={styles.link}
+                href="https://github.com/Brian-Pob/frontend-mentor/tree/master"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Github Repo
+              </A>
+            </div>
+          </div>
+        </section>
+        <section class={styles['challenges-section']}>
+          <h2 class={styles.subtitle}>Challenges</h2>
+          <div class={styles['challenge-list']}>
+            <For each={challenges}>{(challenge) => <ChallengeCard {...challenge} />}</For>
+          </div>
+        </section>
+      </main>
+    </>
   );
 };
 
