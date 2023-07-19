@@ -5,6 +5,7 @@ interface Challenge {
   tags: string[];
   repoUrl: string;
   fmUrl: string;
+  imgSlug: string;
 }
 
 export default Challenge;

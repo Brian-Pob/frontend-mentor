@@ -17,6 +17,7 @@ const challenges: Challenge[] = [
       'https://github.com/Brian-Pob/frontend-mentor/tree/production/src/Challenges/OrderSummaryComponent',
     fmUrl:
       'https://www.frontendmentor.io/solutions/order-summary-using-solid-js-css-modules-flexbox-and-grid-0Ep-Bzrb4U',
+    imgSlug: 'order-summary',
   },
 ];
 

@@ -3,8 +3,8 @@ import { A } from '@solidjs/router';
 import { Challenge as ChallengeDetails } from '../../../types';
 import { For, Show } from 'solid-js';
 import { TbBrandGithub } from 'solid-icons/tb';
-import image from '../../assets/order_summary.webp';
 import FemIcon from './femIcon';
+import myimage from '../../assets/ChallengeImages/order-summary.webp';
 const ChallengeCard = (props: ChallengeDetails) => {
   return (
     <div class={s['challenge-card']}>
@@ -36,7 +36,17 @@ const ChallengeCard = (props: ChallengeDetails) => {
           </div>
         </div>
       </div>
-      <img src={image} alt="Placeholder image" />
+      <picture>
+        <source
+          srcset={`/images/ChallengeImages/${props.imgSlug}_m.webp`}
+          media="(max-width: 768px)"
+        />
+        <source
+          srcset={`/images/ChallengeImages/${props.imgSlug}.webp`}
+          media="(min-width: 769px)"
+        />
+        <img src={`/images/ChallengeImages/${props.imgSlug}.webp`} alt="Placeholder image" />
+      </picture>
     </div>
   );
 };
