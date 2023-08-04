@@ -4,7 +4,6 @@ import { Challenge as ChallengeDetails } from '../../../types';
 import { For, Show } from 'solid-js';
 import { TbBrandGithub } from 'solid-icons/tb';
 import FemIcon from './femIcon';
-import myimage from '../../assets/ChallengeImages/order-summary.webp';
 const ChallengeCard = (props: ChallengeDetails) => {
   return (
     <div class={s['challenge-card']}>
@@ -25,7 +24,7 @@ const ChallengeCard = (props: ChallengeDetails) => {
           </div>
         </div>
         <div class={s['links']}>
-          <A href={props.path}>View Challenge</A>
+          <A href={props.path}>View Solution</A>
           <div class={s['external']}>
             <A href={props.repoUrl} target="_blank" rel="noopener noreferrer">
               <TbBrandGithub />
@@ -36,17 +35,20 @@ const ChallengeCard = (props: ChallengeDetails) => {
           </div>
         </div>
       </div>
-      <picture>
-        <source
-          srcset={`/images/ChallengeImages/${props.imgSlug}_m.webp`}
-          media="(max-width: 768px)"
-        />
-        <source
-          srcset={`/images/ChallengeImages/${props.imgSlug}.webp`}
-          media="(min-width: 769px)"
-        />
-        <img src={`/images/ChallengeImages/${props.imgSlug}.webp`} alt="Placeholder image" />
-      </picture>
+
+      <A href={props.path} class={s['img-link']}>
+        <picture>
+          <source
+            srcset={`/images/ChallengeImages/${props.imgSlug}_m.webp`}
+            media="(max-width: 768px)"
+          />
+          <source
+            srcset={`/images/ChallengeImages/${props.imgSlug}.webp`}
+            media="(min-width: 769px)"
+          />
+          <img src={`/images/ChallengeImages/${props.imgSlug}.webp`} alt="Placeholder image" />
+        </picture>
+      </A>
     </div>
   );
 };
