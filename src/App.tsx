@@ -16,6 +16,7 @@ const App: Component = () => {
             <Route path="/QRCodeComponent" element={<c.QRCodeComponent />} />
             <Route path="/SinglePriceGrid" element={<c.SinglePriceGrid />} />
             <Route path="/PingComingSoonPage" element={<c.Ping />} />
+            <Route path="/AgeCalculator" element={<c.AgeCalculator />} />
           </Route>
         </Routes>
       </Router>
