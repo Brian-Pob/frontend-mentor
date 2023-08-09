@@ -11,6 +11,9 @@ dependencies:
   dayjs:
     specifier: ^1.11.9
     version: 1.11.9
+  isLeapYear:
+    specifier: link:dayjs/plugin/isLeapYear
+    version: link:dayjs/plugin/isLeapYear
   sass:
     specifier: ^1.63.6
     version: 1.63.6
