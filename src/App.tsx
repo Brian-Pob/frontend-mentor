@@ -3,6 +3,7 @@ import type { Component } from 'solid-js';
 import * as c from './Challenges';
 import { Challenges, Home } from './Pages';
 import { Footer, Navbar } from './components';
+// ANCHOR - DELETE ME
 const App: Component = () => {
   return (
     <>

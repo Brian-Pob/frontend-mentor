@@ -19,6 +19,9 @@ export default function AgeCalculator() {
   });
 
   const calculateAge = () => {
+    // TODO: add validation
+
+    // ANCHOR - DELETE ME
     setYear(() => Number((document.querySelector('input[name="year"]') as HTMLInputElement).value));
     setMonth(() =>
       Number((document.querySelector('input[name="month"]') as HTMLInputElement).value)
