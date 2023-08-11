@@ -1,3 +1,6 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+@import "https://unpkg.com/open-props/animations.min.css";
+
 form {
   display: flex;
   flex-direction: row;
@@ -5,5 +8,57 @@ form {
   & div {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result > :nth-child(1) > span {
+  view-transition-name: year;
+
+}
+
+.result > :nth-child(2) > span {
+  view-transition-name: month;
+
+}
+
+.result > :nth-child(3) > span {
+  view-transition-name: day;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(year),
+  ::view-transition-old(month),
+  ::view-transition-old(day) {
+    inline-size: fit-content;
+    animation:
+      var(--animation-fade-out) forwards,
+      var(--animation-slide-out-right) forwards;
+    animation-timing-function:
+      var(--ease-3),
+      var(--ease-spring-2);
+  }
+
+  ::view-transition-old(year):only-child,
+  ::view-transition-old(month):only-child,
+  ::view-transition-old(day):only-child {
+    display: none;
+  }
+
+  ::view-transition-new(year),
+  ::view-transition-new(month),
+  ::view-transition-new(day) {
+    animation:
+      var(--animation-fade-in) reverse,
+      var(--animation-slide-in-left);
+    animation-timing-function:
+      var(--ease-3),
+      var(--ease-spring-2);
   }
 }

@@ -9,6 +9,8 @@ export default function AgeCalculator() {
   const [month, setMonth] = createSignal(1);
   const [day, setDay] = createSignal(1);
 
+  const [maxDays, setMaxDays] = createSignal(31);
+
   const [errors, setErrors] = createSignal({
     year: '',
     month: '',
@@ -66,23 +68,51 @@ export default function AgeCalculator() {
       }
     }
 
-    if (errors().year || errors().month || errors().day || errors().future) {
-      setElapsed({
-        years: '--',
-        months: '--',
-        days: '--',
-      });
+    const updateResult = () => {
+      if (errors().year || errors().month || errors().day || errors().future) {
+        setElapsed({
+          years: '--',
+          months: '--',
+          days: '--',
+        });
+      } else {
+        const birthday = dayjs(`${year()}-${month()}-${day()}`);
+
+        const now = dayjs();
+
+        setElapsed({
+          years: now.diff(birthday, 'year').toString(),
+          months: (now.diff(birthday, 'month') % 12).toString(),
+          days: (now.diff(birthday, 'day') % 30).toString(),
+        });
+      }
+    };
+
+    if (document?.startViewTransition) {
+      const resultSpans = document.querySelectorAll('.result span');
+      console.log(resultSpans);
+      document
+        .startViewTransition(() => {
+          const oldValues = elapsed();
+
+          updateResult();
+
+          if (oldValues.years === elapsed().years) resultSpans[0].style.viewTransitionName = 'none';
+
+          if (oldValues.months === elapsed().months)
+            resultSpans[1].style.viewTransitionName = 'none';
+
+          if (oldValues.days === elapsed().days) resultSpans[2].style.viewTransitionName = 'none';
+        })
+        .finished.then(() => {
+          resultSpans.forEach((val) => {
+            val.style.viewTransitionName = null;
+          });
+        });
     } else {
-      const birthday = dayjs(`${year()}-${month()}-${day()}`);
-
-      const now = dayjs();
-
-      setElapsed({
-        years: now.diff(birthday, 'year').toString(),
-        months: (now.diff(birthday, 'month') % 12).toString(),
-        days: (now.diff(birthday, 'day') % 30).toString(),
-      });
+      updateResult();
     }
+
     setYear(yearInput);
     setMonth(monthInput);
     setDay(dayInput);
@@ -110,22 +140,41 @@ export default function AgeCalculator() {
         >
           <div>
             <label for="year">Year</label>
-            <input type="number" placeholder="Year" name="year" value={year()} />
+            <input
+              type="number"
+              placeholder="Year"
+              name="year"
+              value={year()}
+              min={1900}
+              max={dayjs().year()}
+            />
           </div>
 
           <div>
             <label for="month">Month</label>
-            <input type="number" placeholder="Month" name="month" value={month()} />
+            <input
+              type="number"
+              placeholder="Month"
+              name="month"
+              value={month()}
+              min={1}
+              max={12}
+            />
           </div>
 
           <div>
             <label for="day">Day</label>
-            <input type="number" placeholder="Day" name="day" value={day()} />
+            <input
+              type="number"
+              placeholder="Day"
+              name="day"
+              value={day()}
+              min={1}
+              max={maxDays()}
+            />
           </div>
 
-          <button type="submit" onClick={() => calculateAge()}>
-            Calculate
-          </button>
+          <button type="submit">Calculate</button>
         </form>
 
         <Show when={errors().year || errors().month || errors().day || errors().future}>
@@ -134,15 +183,15 @@ export default function AgeCalculator() {
           </div>
         </Show>
 
-        <div>
+        <div class="result">
           <p>
-            <span>{elapsed().years}</span> years
+            <span id="resultYears">{elapsed().years}</span> years
           </p>
           <p>
-            <span>{elapsed().months}</span> months
+            <span id="resultMonths">{elapsed().months}</span> months
           </p>
           <p>
-            <span>{elapsed().days}</span> days
+            <span id="resultDays">{elapsed().days}</span> days
           </p>
         </div>
       </div>
