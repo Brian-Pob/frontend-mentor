@@ -18,11 +18,9 @@ export default function AgeCalculator() {
     future: '',
   });
 
-  const [elapsed, setElapsed] = createSignal({
-    years: '0',
-    months: '0',
-    days: '0',
-  });
+  const [elapsedYears, setElapsedYears] = createSignal('0');
+  const [elapsedMonths, setElapsedMonths] = createSignal('0');
+  const [elapsedDays, setElapsedDays] = createSignal('0');
 
   const calculateAge = () => {
     const yearInput = Number(
@@ -69,22 +67,32 @@ export default function AgeCalculator() {
     }
 
     const updateResult = () => {
-      if (errors().year || errors().month || errors().day || errors().future) {
-        setElapsed({
-          years: '--',
-          months: '--',
-          days: '--',
-        });
-      } else {
-        const birthday = dayjs(`${year()}-${month()}-${day()}`);
+      if (errors().year) setElapsedYears('--');
 
-        const now = dayjs();
+      if (errors().month) setElapsedMonths('--');
 
-        setElapsed({
-          years: now.diff(birthday, 'year').toString(),
-          months: (now.diff(birthday, 'month') % 12).toString(),
-          days: (now.diff(birthday, 'day') % 30).toString(),
-        });
+      if (errors().day) setElapsedDays('--');
+
+      if (errors().year || errors().month || errors().day) return;
+
+      const birthday = dayjs(`${year()}-${month()}-${day()}`);
+
+      const now = dayjs();
+      const oldValues = [elapsedYears(), elapsedMonths(), elapsedDays()];
+
+      if (now.diff(birthday, 'year').toString() !== oldValues[0]) {
+        console.log('updating years');
+        setElapsedYears(now.diff(birthday, 'year').toString());
+      }
+
+      if ((now.diff(birthday, 'month') % 12).toString() !== oldValues[1]) {
+        console.log('updating months');
+        setElapsedMonths((now.diff(birthday, 'month') % 12).toString());
+      }
+
+      if ((now.diff(birthday, 'day') % 30).toString() !== oldValues[2]) {
+        console.log('updating days');
+        setElapsedDays((now.diff(birthday, 'day') % 30).toString());
       }
     };
 
@@ -93,16 +101,15 @@ export default function AgeCalculator() {
       console.log(resultSpans);
       document
         .startViewTransition(() => {
-          const oldValues = elapsed();
+          const oldValues = [elapsedYears(), elapsedMonths(), elapsedDays()];
 
           updateResult();
 
-          if (oldValues.years === elapsed().years) resultSpans[0].style.viewTransitionName = 'none';
+          if (oldValues[0] === elapsedYears()) resultSpans[0].style.viewTransitionName = 'none';
 
-          if (oldValues.months === elapsed().months)
-            resultSpans[1].style.viewTransitionName = 'none';
+          if (oldValues[1] === elapsedMonths()) resultSpans[1].style.viewTransitionName = 'none';
 
-          if (oldValues.days === elapsed().days) resultSpans[2].style.viewTransitionName = 'none';
+          if (oldValues[2] === elapsedDays()) resultSpans[2].style.viewTransitionName = 'none';
         })
         .finished.then(() => {
           resultSpans.forEach((val) => {
@@ -185,13 +192,13 @@ export default function AgeCalculator() {
 
         <div class="result">
           <p>
-            <span id="resultYears">{elapsed().years}</span> years
+            <span id="resultYears">{elapsedYears()}</span> years
           </p>
           <p>
-            <span id="resultMonths">{elapsed().months}</span> months
+            <span id="resultMonths">{elapsedMonths()}</span> months
           </p>
           <p>
-            <span id="resultDays">{elapsed().days}</span> days
+            <span id="resultDays">{elapsedDays()}</span> days
           </p>
         </div>
       </div>
