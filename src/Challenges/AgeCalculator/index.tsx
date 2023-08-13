@@ -2,6 +2,7 @@ import { For, Show, createEffect, createRenderEffect, createSignal, onMount } fr
 import dayjs from 'dayjs';
 import isLeapYear from 'dayjs/plugin/isLeapYear';
 import './index.css';
+import buttonSvg from './icon-arrow.svg';
 
 export default function AgeCalculator() {
   dayjs.extend(isLeapYear);
@@ -131,57 +132,57 @@ export default function AgeCalculator() {
 
   return (
     <main>
-      <div>
-        <h1>Age Calculator</h1>
-        <p>Enter your birthday to calculate your age.</p>
+      <div class="calculator">
         <form
           onSubmit={(e) => {
             e.preventDefault();
             calculateAge();
           }}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') {
-              calculateAge();
-            }
-          }}
         >
-          <div>
-            <label for="year">Year</label>
-            <input
-              type="number"
-              placeholder="Year"
-              name="year"
-              value={year()}
-              min={1900}
-              max={dayjs().year()}
-            />
+          <div class="inputs">
+            <div>
+              <label for="year">Year</label>
+              <input
+                type="number"
+                placeholder="Year"
+                name="year"
+                value={year()}
+                min={1900}
+                max={dayjs().year()}
+              />
+            </div>
+
+            <div>
+              <label for="month">Month</label>
+              <input
+                type="number"
+                placeholder="Month"
+                name="month"
+                value={month()}
+                min={1}
+                max={12}
+              />
+            </div>
+
+            <div>
+              <label for="day">Day</label>
+              <input
+                type="number"
+                placeholder="Day"
+                name="day"
+                value={day()}
+                min={1}
+                max={maxDays()}
+              />
+            </div>
           </div>
 
-          <div>
-            <label for="month">Month</label>
-            <input
-              type="number"
-              placeholder="Month"
-              name="month"
-              value={month()}
-              min={1}
-              max={12}
-            />
+          <div class="submit-button">
+            <hr />
+            <button type="submit" aria-label="Calculate age" title="Calculate age">
+              <img src={buttonSvg} alt="" />
+            </button>
           </div>
-
-          <div>
-            <label for="day">Day</label>
-            <input
-              type="number"
-              placeholder="Day"
-              name="day"
-              value={day()}
-              min={1}
-              max={maxDays()}
-            />
-          </div>
-
-          <button type="submit">Calculate</button>
         </form>
 
         <Show when={errors().year || errors().month || errors().day || errors().future}>
@@ -191,15 +192,15 @@ export default function AgeCalculator() {
         </Show>
 
         <div class="result">
-          <p>
+          <h2>
             <span id="resultYears">{elapsedYears()}</span> years
-          </p>
-          <p>
+          </h2>
+          <h2>
             <span id="resultMonths">{elapsedMonths()}</span> months
-          </p>
-          <p>
+          </h2>
+          <h2>
             <span id="resultDays">{elapsedDays()}</span> days
-          </p>
+          </h2>
         </div>
       </div>
     </main>

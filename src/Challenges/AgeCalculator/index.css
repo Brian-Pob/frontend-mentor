@@ -1,35 +1,122 @@
-@import "https://unpkg.com/open-props/easings.min.css";
-@import "https://unpkg.com/open-props/animations.min.css";
+@import 'https://unpkg.com/open-props/easings.min.css';
+@import 'https://unpkg.com/open-props/animations.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  text-align: center;
+}
+
+.calculator {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px 10px 100px 10px;
+
+  min-width: min(92%, 450px);
+
+  --primary-color: blueviolet;
+}
 
 form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
-  & div {
+  .inputs {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    > :has(input) {
+      display: flex;
+      flex-direction: column;
+
+      & label {
+        text-align: start;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: gray;
+      }
+
+      & input {
+        font-weight: bold;
+        font-size: large;
+        padding: 0.5rem 0 0.5rem 1rem;
+        border-radius: 5px;
+        border: 2px solid #ccccccaa;
+
+        width: 95px;
+      }
+    }
   }
+
+  & button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    content: '';
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  & button:hover {
+    cursor: pointer;
+    background-color: #3d1562;
+  }
+}
+
+.submit-button {
+  padding: 2rem 0;
+  position: relative;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #ccccccaa;
+  height: 5px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 50%;
 }
 
 .result {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  text-align: start;
+
+  & h2 {
+    margin: 0;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 3rem;
+
+    & span {
+      color: var(--primary-color);
+    }
+  }
 }
 
 .result > :nth-child(1) > span {
   view-transition-name: year;
-
 }
 
 .result > :nth-child(2) > span {
   view-transition-name: month;
-
 }
 
 .result > :nth-child(3) > span {
   view-transition-name: day;
-
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -37,12 +124,8 @@ form {
   ::view-transition-old(month),
   ::view-transition-old(day) {
     inline-size: fit-content;
-    animation:
-      var(--animation-fade-out) forwards,
-      var(--animation-slide-out-right) forwards;
-    animation-timing-function:
-      var(--ease-3),
-      var(--ease-spring-2);
+    animation: var(--animation-fade-out) forwards, var(--animation-slide-out-right) forwards;
+    animation-timing-function: var(--ease-3), var(--ease-spring-2);
   }
 
   ::view-transition-old(year):only-child,
@@ -54,12 +137,8 @@ form {
   ::view-transition-new(year),
   ::view-transition-new(month),
   ::view-transition-new(day) {
-    animation:
-      var(--animation-fade-in) reverse,
-      var(--animation-slide-in-left);
-    animation-timing-function:
-      var(--ease-3),
-      var(--ease-spring-2);
+    animation: var(--animation-fade-in) reverse, var(--animation-slide-in-left);
+    animation-timing-function: var(--ease-3), var(--ease-spring-2);
   }
 }
 
