@@ -1,0 +1,13 @@
+name: Check Files for "Delete Me" line
+on: [push, pull_request]
+
+jobs:
+  check_files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Run bash script
+        run: ./delete_me_check.sh

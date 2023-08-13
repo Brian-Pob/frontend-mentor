@@ -10,6 +10,7 @@ const Challenges = () => {
     SinglePriceGrid: '/Challenges/SinglePriceGrid',
     ArticlePreviewComponent: 'https://cheerful-pastelito-dd1736.netlify.app/',
     PingComingSoonPage: '/Challenges/PingComingSoonPage',
+    AgeCalculator: '/Challenges/AgeCalculator',
   };
   return (
     <main class={styles.App}>

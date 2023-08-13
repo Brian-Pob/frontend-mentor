@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
 .QRCodeComponent {
   --qr-white: hsl(0, 0%, 100%);
@@ -11,11 +11,11 @@
   --qr-text: var(--qr-grayish-blue);
   min-width: 100%;
   min-height: 100vh;
-  display: grid;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  font-family: "Outfit", sans-serif;
+  font-family: 'Outfit', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--qr-bg);
