@@ -47,9 +47,17 @@ export default function AgeCalculator() {
     }
 
     // Handle leap years and months with 30 days
-    if (dayjs(yearInput).isLeapYear() && monthInput === 2 && dayInput > 29) {
+    if (
+      dayjs(`${yearInput}-${monthInput}-${dayInput}`).isLeapYear() &&
+      monthInput === 2 &&
+      dayInput > 29
+    ) {
       setErrors((prev) => ({ ...prev, day: 'February has 29 days this year' }));
-    } else if (!dayjs(yearInput).isLeapYear() && monthInput === 2 && dayInput > 28) {
+    } else if (
+      !dayjs(`${yearInput}-${monthInput}-${dayInput}`).isLeapYear() &&
+      monthInput === 2 &&
+      dayInput > 28
+    ) {
       setErrors((prev) => ({ ...prev, day: 'February has 28 days this year' }));
     } else if ([4, 6, 9, 11].includes(monthInput) && dayInput > 30) {
       setErrors((prev) => ({ ...prev, day: 'This month has 30 days' }));
@@ -74,7 +82,10 @@ export default function AgeCalculator() {
 
       if (errors().day) setElapsedDays('--');
 
-      if (errors().year || errors().month || errors().day) return;
+      if (errors().year || errors().month || errors().day) {
+        document.querySelector('.inputs')?.classList.add('errors');
+        return;
+      }
 
       const birthday = dayjs(`${year()}-${month()}-${day()}`);
 
@@ -82,24 +93,20 @@ export default function AgeCalculator() {
       const oldValues = [elapsedYears(), elapsedMonths(), elapsedDays()];
 
       if (now.diff(birthday, 'year').toString() !== oldValues[0]) {
-        console.log('updating years');
         setElapsedYears(now.diff(birthday, 'year').toString());
       }
 
       if ((now.diff(birthday, 'month') % 12).toString() !== oldValues[1]) {
-        console.log('updating months');
         setElapsedMonths((now.diff(birthday, 'month') % 12).toString());
       }
 
       if ((now.diff(birthday, 'day') % 30).toString() !== oldValues[2]) {
-        console.log('updating days');
         setElapsedDays((now.diff(birthday, 'day') % 30).toString());
       }
     };
 
     if (document?.startViewTransition) {
       const resultSpans = document.querySelectorAll('.result span');
-      console.log(resultSpans);
       document
         .startViewTransition(() => {
           const oldValues = [elapsedYears(), elapsedMonths(), elapsedDays()];
@@ -185,7 +192,10 @@ export default function AgeCalculator() {
           </div>
         </form>
 
-        <Show when={errors().year || errors().month || errors().day || errors().future}>
+        <Show
+          when={errors().year || errors().month || errors().day || errors().future}
+          fallback={<div class="errors"></div>}
+        >
           <div class="errors">
             <For each={Object.values(errors())}>{(error) => <p>{error}</p>}</For>
           </div>
