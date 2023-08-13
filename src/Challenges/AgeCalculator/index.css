@@ -10,7 +10,7 @@ main {
   min-height: 100%;
 
   font-family: 'Poppins', sans-serif;
-  background-color: black;
+  background-color: hsl(0 0% 94%);
   text-align: center;
 }
 
@@ -64,19 +64,50 @@ form {
     border-radius: 50%;
     content: '';
     padding: 1rem;
-    position: relative;
+    cursor: pointer;
+
     z-index: 2;
+    position: relative;
   }
 
-  & button:hover {
-    cursor: pointer;
-    background-color: #3d1562;
+  @media (min-width: 768px) {
+    & button {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  @media (hover: hover) {
+    & button:hover {
+      background-color: #3d1562;
+    }
+  }
+
+  & button:active {
+    background-color: black;
+  }
+
+  & button:focus {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  & button:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 5px;
   }
 }
 
 .submit-button {
   padding: 2rem 0;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .submit-button {
+    margin: 1.5rem 0;
+  }
 }
 
 hr {
@@ -105,6 +136,11 @@ hr {
       color: var(--primary-color);
     }
   }
+}
+
+.errors {
+  color: hsl(0 100% 67%) !important;
+  border-color: hsl(0 100% 67%) !important;
 }
 
 .result > :nth-child(1) > span {
