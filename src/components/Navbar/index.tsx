@@ -1,6 +1,6 @@
-import type { Location } from "@solidjs/router";
-import { A, AnchorProps, useLocation, useNavigate } from "@solidjs/router";
-import s from "./Navbar.module.css";
+import type { Location } from '@solidjs/router';
+import { A, AnchorProps, useLocation, useNavigate } from '@solidjs/router';
+import s from './Navbar.module.css';
 
 export function Link(props: AnchorProps) {
   const location = useLocation();
@@ -17,11 +17,11 @@ export function BackButton({ text }: { text?: string }) {
   const navigate = useNavigate();
   const location = useLocation<LocationState>();
 
-  const backPath = () => (location.state?.previous ? -1 : ("/" as any));
+  const backPath = () => (location.state?.previous ? -1 : ('/' as any));
   // Credit for solution:
   // https://bobbyhadz.com/blog/typescript-no-overload-matches-this-call
   return (
-    <button onClick={() => navigate(-1)} class={s["back-button"]}>
+    <button onClick={() => navigate(-1)} class={s['back-button']}>
       {text}
     </button>
   );
@@ -32,7 +32,14 @@ const Navbar = () => {
   return (
     <nav class={s.header}>
       <BackButton text="Back" />
-      <h2>Work In Progress! 🛠️</h2>
+      <div class={s.links}>
+        <Link href="/" class={s['header-link']}>
+          Home
+        </Link>
+        <Link href="/challenges" class={s['header-link']}>
+          Completed Challenges
+        </Link>
+      </div>
     </nav>
   );
 };
