@@ -30,7 +30,7 @@ Site is deployed for free on Netlify! <https://solid-mentor.netlify.app>
 * ~~[QR Code Component](https://github.com/Brian-Pob/frontend-mentor/tree/master/src/Challenges/QRCodeComponent)~~
 ![QR Code Component screenshot](public/images/ChallengeImages/qr-code.webp)
 * ~~[Order Summary Component](https://github.com/Brian-Pob/frontend-mentor/tree/master/src/Challenges/OrderSummaryComponent)~~
-![Order Summary Component screenshot](public/images/ChallengeImages/order-summary.webp)
+![Order Summary Component screenshot](public/images/ChallengeImages/order-summary.gif)
 * ~~[Single Price Grid Component](https://github.com/Brian-Pob/frontend-mentor/tree/master/src/Challenges/SinglePriceGridComponent)~~
 ![Single Price Grid Component screenshot](public/images/ChallengeImages/price-grid.webp)
 * ~~[Ping Coming Soon Page](https://github.com/Brian-Pob/frontend-mentor/tree/master/src/Challenges/PingComingSoonPage)~~
