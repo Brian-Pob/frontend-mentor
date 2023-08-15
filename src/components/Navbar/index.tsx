@@ -17,7 +17,6 @@ export function BackButton({ text }: { text?: string }) {
   const navigate = useNavigate();
   const location = useLocation<LocationState>();
 
-  const backPath = () => (location.state?.previous ? -1 : ('/' as any));
   // Credit for solution:
   // https://bobbyhadz.com/blog/typescript-no-overload-matches-this-call
   return (

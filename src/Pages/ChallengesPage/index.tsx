@@ -11,6 +11,7 @@ const Challenges = () => {
     ArticlePreviewComponent: 'https://cheerful-pastelito-dd1736.netlify.app/',
     PingComingSoonPage: '/Challenges/PingComingSoonPage',
     AgeCalculator: '/Challenges/AgeCalculator',
+    TestimonialsGrid: '/Challenges/TestimonialsGrid',
   };
   return (
     <main class={styles.App}>

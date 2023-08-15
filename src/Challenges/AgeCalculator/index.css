@@ -2,7 +2,7 @@
 @import 'https://unpkg.com/open-props/animations.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
 
-main {
+main.age-calculator {
   display: flex;
   flex-direction: column;
   align-items: center;

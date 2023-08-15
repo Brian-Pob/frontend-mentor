@@ -138,7 +138,7 @@ export default function AgeCalculator() {
   });
 
   return (
-    <main>
+    <main class="age-calculator">
       <div class="calculator">
         <form
           onSubmit={(e) => {
