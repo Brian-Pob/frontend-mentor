@@ -25,13 +25,21 @@ Site is deployed for free on Netlify! <https://solid-mentor.netlify.app>
 1. Install dependencies with `pnpm install`. Regular npm should also work.
 1. Run `pnpm dev` to start the dev server.
 
-## 🥊 Challenges
+## 🥊 Completed and In-Progress Challenges
 
-If it's crossed out it means I've completed it. If it doesn't have a folder it means I haven't started it yet.
-
-* ~~[QR Code Component](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H)~~
-* ~~[Order Summary Component](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj)~~
-* [Single Price Grid Component](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc)
+* ~~[QR Code Component](https://github.com/Brian-Pob/frontend-mentor/tree/master/src/Challenges/QRCodeComponent)~~
+![QR Code Component screenshot](public/images/ChallengeImages/qr-code.webp)
+* ~~[Order Summary Component](https://github.com/Brian-Pob/frontend-mentor/tree/master/src/Challenges/OrderSummaryComponent)~~
+![Order Summary Component screenshot](public/images/ChallengeImages/order-summary.webp)
+* ~~[Single Price Grid Component](https://github.com/Brian-Pob/frontend-mentor/tree/master/src/Challenges/SinglePriceGridComponent)~~
+![Single Price Grid Component screenshot](public/images/ChallengeImages/price-grid.webp)
+* ~~[Ping Coming Soon Page](https://github.com/Brian-Pob/frontend-mentor/tree/master/src/Challenges/PingComingSoonPage)~~
+![Ping Coming Soon Page screenshot](public/images/ChallengeImages/coming-soon.webp)
+* ~~[Article Preview Component](https://cheerful-pastelito-dd1736.netlify.app/)~~
+![Article Preview Component screenshot](public/images/ChallengeImages/article-preview.webp)
+* ~~[Age Calculator](https://github.com/Brian-Pob/frontend-mentor/tree/master/src/Challenges/AgeCalculator)~~
+![Age Calculator screenshot](public/images/ChallengeImages/age-calculator.gif)
+* [Testimonials Grid - In Progress](https://github.com/Brian-Pob/frontend-mentor/tree/master/src/Challenges/TestimonialsGrid)
 
 ## 🧑‍💻 Authors
 
@@ -44,21 +52,3 @@ Whatever Frontend Mentor uses lol.
 ## 👏 Acknowledgments
 
 * README template from [DomPizzie](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
-
-## 📔 Journal
-
-### 2023-03-03
-
-Created the folder for the Single Price Grid component. For this one, I decided not to use Tailwind just yet. I decided to try adding an index.css file with a CSS reset. I recently learned about CSS resets and I think it's a cool concept. I'm still decideding what I'm going to have in the reset so I'll see where that goes.
-
-### 2023-03-01
-
-Tried to use GPG keys. Not going well. One more time.
-
-### 2023-02-27
-
-So I was able to refactor the project into an SPA with Solid Router. I was able to get around issues with CSS variables in the document root by assigning the variables inside a class that is used by the `<main>` tag in each challenge. What I want to do next is make the app more modular by moving the components into a common components folder so that each challenge can reuse the same component code. The only difference will be where the styles are located. I am experimenting with CSS Modules and later on I also want to try TailwindCSS and CSS in JS.
-
-### 2023-02-24
-
-An attempt to do something cool was made. I tried to make my app an SPA with Solid Router and have each route load a different set of styles. I knew that this would be ideal with a multi page app but I didn't realize it would be so difficult with an SPA. I realized that an app with this structure would not scale well with having to manage so many different style sets. I guess I learned a lot about what not to do `¯\_(ツ)_/¯`
