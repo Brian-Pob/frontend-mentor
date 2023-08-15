@@ -87,6 +87,8 @@ export default function AgeCalculator() {
         return;
       }
 
+      document.querySelector('.inputs')?.classList.remove('errors');
+
       const birthday = dayjs(`${year()}-${month()}-${day()}`);
 
       const now = dayjs();
@@ -138,7 +140,7 @@ export default function AgeCalculator() {
   });
 
   return (
-    <main>
+    <main class="age-calculator">
       <div class="calculator">
         <form
           onSubmit={(e) => {

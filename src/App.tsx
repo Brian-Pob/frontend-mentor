@@ -17,6 +17,7 @@ const App: Component = () => {
             <Route path="/SinglePriceGrid" element={<c.SinglePriceGrid />} />
             <Route path="/PingComingSoonPage" element={<c.Ping />} />
             <Route path="/AgeCalculator" element={<c.AgeCalculator />} />
+            <Route path="/TestimonialsGrid" element={<c.TestimonialsGrid />} />
           </Route>
         </Routes>
       </Router>

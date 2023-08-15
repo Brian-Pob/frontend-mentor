@@ -26,13 +26,13 @@ const Home = () => {
     <>
       <main class={styles.App}>
         <section>
-          <div class="hero">
-            <h1 class={styles.title}>Frontend Mentor Challenges</h1>
+          <div class={styles.hero}>
+            <h1 class={styles.title}>[Work in Progress] Frontend Mentor Challenges</h1>
             <p class={styles.description}>
               A collection of Frontend Mentor challenges that I completed using various tools and
               frameworks.
             </p>
-            <div class="links">
+            <div class={styles.links}>
               <A class={styles.link} href="/Challenges">
                 View Completed Challenges
               </A>
@@ -48,7 +48,7 @@ const Home = () => {
           </div>
         </section>
         <section class={styles['challenges-section']}>
-          <h2 class={styles.subtitle}>Challenges</h2>
+          <h2 class={styles.subtitle}>Highlighted Challenges</h2>
           <div class={styles['challenge-list']}>
             <For each={challenges}>{(challenge) => <ChallengeCard {...challenge} />}</For>
           </div>
