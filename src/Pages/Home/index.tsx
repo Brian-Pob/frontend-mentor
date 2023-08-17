@@ -19,6 +19,18 @@ const challenges: Challenge[] = [
       'https://www.frontendmentor.io/solutions/order-summary-using-solid-js-css-modules-flexbox-and-grid-0Ep-Bzrb4U',
     imgSlug: 'order-summary',
   },
+  {
+    name: 'QR Code Component',
+    path: '/Challenges/QRCodeComponent',
+    description:
+      'A QR code component that generates a QR code based on the inputted text. Using CSS Modules with for styling.',
+    tags: ['SolidJS', 'CSS Modules', 'QR Code'],
+    repoUrl:
+      'https://github.com/Brian-Pob/frontend-mentor/tree/production/src/Challenges/QRCodeComponent',
+    fmUrl:
+      'https://www.frontendmentor.io/solutions/qr-code-using-grid-css-modules-and-solid-js-ViLtifUg5c',
+    imgSlug: 'qr-code',
+  },
 ];
 
 const Home = () => {
