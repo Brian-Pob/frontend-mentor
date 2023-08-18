@@ -17,7 +17,7 @@ const challenges: Challenge[] = [
       'https://github.com/Brian-Pob/frontend-mentor/tree/production/src/Challenges/OrderSummaryComponent',
     fmUrl:
       'https://www.frontendmentor.io/solutions/order-summary-using-solid-js-css-modules-flexbox-and-grid-0Ep-Bzrb4U',
-    imgSlug: 'order-summary',
+    imgTitle: 'order-summary.webp',
   },
   {
     name: 'QR Code Component',
@@ -29,7 +29,26 @@ const challenges: Challenge[] = [
       'https://github.com/Brian-Pob/frontend-mentor/tree/production/src/Challenges/QRCodeComponent',
     fmUrl:
       'https://www.frontendmentor.io/solutions/qr-code-using-grid-css-modules-and-solid-js-ViLtifUg5c',
-    imgSlug: 'qr-code',
+    imgTitle: 'qr-code.webp',
+  },
+  {
+    name: 'Age Calculator',
+    path: '/Challenges/AgeCalculator',
+    description:
+      "A simple age calculator that calculates your age based on your birthday. Using CSS with native nesting and the View Transition API for element transitions. Also making use of Adam Argyle's Open Props library for CSS variables.",
+    tags: [
+      'SolidJS',
+      'CSS',
+      'CSS Variables',
+      'Native Nesting',
+      'View Transition API',
+      'Open Props',
+    ],
+    repoUrl:
+      'https://github.com/Brian-Pob/frontend-mentor/tree/production/src/Challenges/AgeCalculator',
+    fmUrl:
+      'https://www.frontendmentor.io/solutions/age-calculator-using-native-css-nesting-and-view-transitions-api-_-Ld9yjXeg',
+    imgTitle: 'age-calculator.gif',
   },
 ];
 
