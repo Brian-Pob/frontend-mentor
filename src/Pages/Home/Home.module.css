@@ -44,11 +44,8 @@
   color: Highlight;
 }
 
-section {
-  padding-bottom: 2rem;
-}
-
 .challenges-section {
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
