@@ -78,6 +78,18 @@ const ChallengesList: Challenge[] = [
       'https://www.frontendmentor.io/solutions/responsive-layout-using-scss-and-flexboc-HsUoBZpkJ4',
     imgTitle: 'coming-soon.webp',
   },
+  {
+    name: 'Testimonials Grid',
+    path: '/Challenges/TestimonialsGrid',
+    description:
+      "A simple testimonials grid component. Using Grid with SCSS. Responsive layout implemented using media queries and grid area. Code inspired by Kevin Powell's solution. Using shadows from OpenProps.",
+    tags: ['SolidJS', 'SCSS', 'Media Queries', 'CSS Grid'],
+    repoUrl:
+      'https://github.com/Brian-Pob/frontend-mentor/tree/production/src/Challenges/TestimonialsGrid',
+    fmUrl:
+      'https://www.frontendmentor.io/solutions/responsive-grid-with-scss-and-openprops-Q2w4FoqgrC',
+    imgTitle: 'testimonials.gif',
+  },
 ];
 
 export { ChallengesList };
