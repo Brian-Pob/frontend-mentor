@@ -20,77 +20,108 @@ main.testimonials-grid {
   font-size: 1rem;
   font-family: $font-family;
   background-color: $lightGrayBlue;
-}
 
-.testimonials {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-areas: 'one one two five' 'three four four five';
 
-  max-width: clamp(375px, 85%, 1000px);
-  // max-height: 820px;
-  // aspect-ratio: 1.5 / 1;
+    max-width: min(95%, 1050px);
 
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas: 'one' 'two' 'three' 'four' 'five';
+      margin: 0 0.75em 0 0.75em;
+
+      padding: 1em 0 1em 0;
+    }
+
+    @media (min-width: 768px) and (max-width: 850px) {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: 'one two' 'three four' 'five five';
+      padding: 1em 0 1em 0;
+    }
+
+    .testimonial:nth-child(1) {
+      grid-area: one;
+
+      background-color: $violet;
+      color: white;
+    }
+
+    .testimonial:nth-child(2) {
+      grid-area: two;
+
+      background-color: $grayBlue;
+      color: white;
+    }
+
+    .testimonial:nth-child(3) {
+      grid-area: three;
+
+      background-color: white;
+      img {
+        border-color: $violet;
+      }
+    }
+
+    .testimonial:nth-child(4) {
+      grid-area: four;
+
+      background-color: $blackBlue;
+      color: white;
+    }
+
+    .testimonial:nth-child(5) {
+      grid-area: five;
+
+      background-color: white;
+      img {
+        border-color: $violet;
+      }
+    }
   }
-}
 
-.testimonial {
-  min-height: 300px;
-  max-height: 100%;
+  .testimonial {
+    min-height: 300px;
 
-  box-shadow: var(--shadow-6);
-  border-radius: 10px;
-  padding: 20px;
+    box-shadow: var(--shadow-4);
+    border-radius: 10px;
+    padding: 20px;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  @media (max-width: 768px) {
-    min-height: auto;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    @media (max-width: 768px) {
+      min-height: auto;
+    }
+
+    > .info {
+      display: flex;
+      gap: 1rem;
+    }
+
+    > p:nth-of-type(1) {
+      margin: 1rem 0 1rem;
+      font-weight: 600;
+      font-size: 1.3em;
+      line-height: 1.2;
+    }
+
+    > p:nth-of-type(2) {
+      font-size: 0.9em;
+      line-height: 1.5;
+      font-weight: 500;
+    }
   }
-}
-
-.body-text {
-  text-overflow: ellipsis;
-}
-// nth-child() selects the nth element of its parent
-// That is, if this element is the nth child of its parent.
-// It does not select the nth child of the selector.
-.testimonial:nth-child(1) {
-  grid-column: 1 / 3;
-
-  background-color: $violet;
-  color: white;
-}
-
-.testimonial:nth-child(2) {
-  grid-column: 3 / 4;
-
-  background-color: $grayBlue;
-  color: white;
-}
-
-.testimonial:nth-child(3) {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-
-  background-color: white;
-}
-
-.testimonial:nth-child(4) {
-  grid-column: 2 / 4;
-  grid-row: 2 / 3;
-
-  background-color: $blackBlue;
-  color: white;
-}
-
-.testimonial:nth-child(5) {
-  grid-column: 4 / 5;
-  grid-row: 1 / 3;
-
-  background-color: white;
 }
