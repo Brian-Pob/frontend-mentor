@@ -35,20 +35,11 @@ const ChallengeCard = (props: ChallengeDetails) => {
           </div>
         </div>
       </div>
-
-      <A href={props.path} class={s['img-link']}>
-        <picture>
-          <source
-            srcset={`/images/ChallengeImages/${props.imgSlug}_m.webp`}
-            media="(max-width: 768px)"
-          />
-          <source
-            srcset={`/images/ChallengeImages/${props.imgSlug}.webp`}
-            media="(min-width: 769px)"
-          />
-          <img src={`/images/ChallengeImages/${props.imgSlug}.webp`} alt="Placeholder image" />
-        </picture>
-      </A>
+      <div class={s['card-img']}>
+        <A href={props.path} class={s['img-link']}>
+          <img src={`/images/ChallengeImages/${props.imgTitle}`} alt="Placeholder image" />
+        </A>
+      </div>
     </div>
   );
 };

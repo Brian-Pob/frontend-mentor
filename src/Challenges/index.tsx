@@ -4,6 +4,7 @@ import QRCodeComponent from './QRCodeComponent';
 import SinglePriceGrid from './SinglePriceGridComponent';
 import AgeCalculator from './AgeCalculator';
 import TestimonialsGrid from './TestimonialsGrid';
+import ArticlePreviewComponent from './ArticlePreviewComponent';
 
 export {
   OrderSummaryComponent,
@@ -12,4 +13,5 @@ export {
   SinglePriceGrid,
   AgeCalculator,
   TestimonialsGrid,
+  ArticlePreviewComponent,
 };

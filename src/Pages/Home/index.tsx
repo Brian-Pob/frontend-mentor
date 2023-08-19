@@ -4,22 +4,7 @@ import logo from './logo.svg';
 import { Challenge } from '../../../types';
 import ChallengeCard from '../../components/ChallengeCard';
 import { For } from 'solid-js';
-
-// const challenges = [
-const challenges: Challenge[] = [
-  {
-    name: 'Order Summary Component',
-    path: '/Challenges/OrderSummaryComponent',
-    description:
-      'A simple order summary component. Using CSS Modules with SCSS for styling. I also implemented a nice button animation using CSS transitions.',
-    tags: ['SolidJS', 'CSS Modules', 'SCSS', 'CSS Transitions'],
-    repoUrl:
-      'https://github.com/Brian-Pob/frontend-mentor/tree/production/src/Challenges/OrderSummaryComponent',
-    fmUrl:
-      'https://www.frontendmentor.io/solutions/order-summary-using-solid-js-css-modules-flexbox-and-grid-0Ep-Bzrb4U',
-    imgSlug: 'order-summary',
-  },
-];
+import { ChallengesList } from '../../Challenges/Challenges';
 
 const Home = () => {
   return (
@@ -50,7 +35,9 @@ const Home = () => {
         <section class={styles['challenges-section']}>
           <h2 class={styles.subtitle}>Highlighted Challenges</h2>
           <div class={styles['challenge-list']}>
-            <For each={challenges}>{(challenge) => <ChallengeCard {...challenge} />}</For>
+            <For each={ChallengesList.slice(0, 3)}>
+              {(challenge) => <ChallengeCard {...challenge} />}
+            </For>
           </div>
         </section>
       </main>
