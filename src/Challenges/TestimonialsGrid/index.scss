@@ -51,6 +51,9 @@ main.testimonials-grid {
 
       background-color: $violet;
       color: white;
+      background-image: url('./bg-pattern-quotation.svg');
+      background-repeat: no-repeat;
+      background-position: 90% 0;
     }
 
     .testimonial:nth-child(2) {
