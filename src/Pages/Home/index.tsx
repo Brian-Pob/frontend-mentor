@@ -40,6 +40,21 @@ const Home = () => {
             </For>
           </div>
         </section>
+        <section>
+          <div class={styles.links}>
+            <A class={styles.link} href="/Challenges">
+              View Completed Challenges
+            </A>
+            <A
+              class={styles.link}
+              href="https://github.com/Brian-Pob/frontend-mentor/tree/master"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Github Repo
+            </A>
+          </div>
+        </section>
       </main>
     </>
   );
