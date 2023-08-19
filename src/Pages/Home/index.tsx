@@ -19,7 +19,7 @@ const Home = () => {
             </p>
             <div class={styles.links}>
               <A class={styles.link} href="/Challenges">
-                View Completed Challenges
+                View All Challenges
               </A>
               <A
                 class={styles.link}
@@ -43,7 +43,7 @@ const Home = () => {
         <section>
           <div class={styles.links}>
             <A class={styles.link} href="/Challenges">
-              View Completed Challenges
+              View All Challenges
             </A>
             <A
               class={styles.link}
