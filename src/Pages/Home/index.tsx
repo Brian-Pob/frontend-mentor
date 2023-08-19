@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import { Challenge } from '../../../types';
 import ChallengeCard from '../../components/ChallengeCard';
 import { For } from 'solid-js';
-import { ChallengesList } from '../ChallengesPage/Challenges';
+import { ChallengesList } from '../../Challenges/Challenges';
 
 const Home = () => {
   return (

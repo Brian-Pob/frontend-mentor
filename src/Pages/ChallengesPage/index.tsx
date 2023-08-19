@@ -2,7 +2,7 @@ import { A } from '@solidjs/router';
 import { For } from 'solid-js';
 import logo from '../../assets/favicon.png';
 import styles from './index.module.css';
-import { ChallengesList } from '../ChallengesPage/Challenges';
+import { ChallengesList } from '../../Challenges/Challenges';
 import ChallengeCard from '../../components/ChallengeCard';
 
 const Challenges = () => {

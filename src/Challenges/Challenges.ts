@@ -1,4 +1,4 @@
-import { Challenge } from '../../../types';
+import { Challenge } from '../../types';
 const ChallengesList: Challenge[] = [
   {
     name: 'Order Summary Component',
@@ -53,6 +53,30 @@ const ChallengesList: Challenge[] = [
     fmUrl:
       'https://www.frontendmentor.io/solutions/article-preview-with-tailwind-alpinejs-AeyzzmHKHZ',
     imgTitle: 'article-preview.webp',
+  },
+  {
+    name: 'Single Price Grid',
+    path: '/Challenges/SinglePriceGrid',
+    description:
+      'A simple single price grid component. Using CSS modules with SCSS for styling. Responsive layout implemented using media queries and CSS grid.',
+    tags: ['SolidJS', 'CSS Modules', 'SCSS', 'Media Queries', 'CSS Grid'],
+    repoUrl:
+      'https://github.com/Brian-Pob/frontend-mentor/tree/production/src/Challenges/SinglePriceGridComponent',
+    fmUrl:
+      'https://www.frontendmentor.io/solutions/single-price-component-using-grid-flex-css-modules-and-solid-js-2tLniOLnmR',
+    imgTitle: 'price-grid.webp',
+  },
+  {
+    name: 'Ping Coming Soon Page',
+    path: '/Challenges/PingComingSoonPage',
+    description:
+      'A simple coming soon page. Using CSS modules with SCSS for styling. Flexbox used for layout.',
+    tags: ['SolidJS', 'CSS Modules', 'SCSS', 'Flexbox'],
+    repoUrl:
+      'https://github.com/Brian-Pob/frontend-mentor/tree/production/src/Challenges/PingComingSoonPage',
+    fmUrl:
+      'https://www.frontendmentor.io/solutions/responsive-layout-using-scss-and-flexboc-HsUoBZpkJ4',
+    imgTitle: 'coming-soon.webp',
   },
 ];
 
