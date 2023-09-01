@@ -18,6 +18,7 @@ const App: Component = () => {
             <Route path="/PingComingSoonPage" element={<c.Ping />} />
             <Route path="/AgeCalculator" element={<c.AgeCalculator />} />
             <Route path="/TestimonialsGrid" element={<c.TestimonialsGrid />} />
+            <Route path="/Calculator" element={<c.Calculator />} />
 
             {/* Paths below are hosted on a different site*/}
             <Route path="/ArticlePreviewComponent" element={<c.Redirector />} />

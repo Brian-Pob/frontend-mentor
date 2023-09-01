@@ -4,6 +4,8 @@ import QRCodeComponent from './QRCodeComponent';
 import SinglePriceGrid from './SinglePriceGridComponent';
 import AgeCalculator from './AgeCalculator';
 import TestimonialsGrid from './TestimonialsGrid';
+import Calculator from './Calculator';
+
 import Redirector from '../components/Redirector';
 
 export {
@@ -13,5 +15,8 @@ export {
   SinglePriceGrid,
   AgeCalculator,
   TestimonialsGrid,
+  Calculator,
+
+  // Redirector for handling redirects to external sites
   Redirector,
 };
