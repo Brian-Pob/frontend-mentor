@@ -1,7 +1,7 @@
 import { For, Show, createEffect, createRenderEffect, createSignal, onMount } from 'solid-js';
 import dayjs from 'dayjs';
 import isLeapYear from 'dayjs/plugin/isLeapYear';
-import './index.css';
+import './index.scss';
 import buttonSvg from './icon-arrow.svg';
 
 export default function AgeCalculator() {
