@@ -14,7 +14,7 @@ main.age-calculator {
   text-align: center;
 }
 
-.calculator {
+.age-calculator .calculator {
   background-color: white;
   padding: 1.5rem;
   border-radius: 10px 10px 100px 10px;
@@ -98,63 +98,64 @@ main.age-calculator {
     outline-offset: 5px;
   }
 }
-
-.submit-button {
-  padding: 2rem 0;
-  position: relative;
-}
-
-@media (min-width: 768px) {
+.age-calculator {
   .submit-button {
-    margin: 1.5rem 0;
+    padding: 2rem 0;
+    position: relative;
   }
-}
 
-hr {
-  border: none;
-  border-top: 2px solid #ccccccaa;
-  height: 5px;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  top: 50%;
-}
-
-.result {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  text-align: start;
-
-  & h2 {
-    margin: 0;
-    font-weight: 800;
-    font-style: italic;
-    font-size: 3rem;
-
-    & span {
-      color: var(--primary-color);
+  @media (min-width: 768px) {
+    .submit-button {
+      margin: 1.5rem 0;
     }
   }
-}
 
-.errors,
-.age-calculator .inputs.errors input,
-.age-calculator .inputs.errors label {
-  color: hsl(0 100% 67%) !important;
-  border-color: hsl(0 100% 67%) !important;
-}
+  hr {
+    border: none;
+    border-top: 2px solid #ccccccaa;
+    height: 5px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 50%;
+  }
 
-.result > :nth-child(1) > span {
-  view-transition-name: year;
-}
+  .result {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: start;
 
-.result > :nth-child(2) > span {
-  view-transition-name: month;
-}
+    & h2 {
+      margin: 0;
+      font-weight: 800;
+      font-style: italic;
+      font-size: 3rem;
 
-.result > :nth-child(3) > span {
-  view-transition-name: day;
+      & span {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .errors,
+  .inputs.errors input,
+  .inputs.errors label {
+    color: hsl(0 100% 67%) !important;
+    border-color: hsl(0 100% 67%) !important;
+  }
+
+  .result > :nth-child(1) > span {
+    view-transition-name: year;
+  }
+
+  .result > :nth-child(2) > span {
+    view-transition-name: month;
+  }
+
+  .result > :nth-child(3) > span {
+    view-transition-name: day;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

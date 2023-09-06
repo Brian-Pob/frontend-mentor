@@ -1,0 +1,177 @@
+@use './colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+main#calculator-challenge {
+  * {
+    font-family: 'League Spartan', sans-serif;
+  }
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+
+  // background-color: map-get($active-theme, 'main-bg');
+  background-color: var(--main-bg);
+
+  .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .calculator {
+    max-width: 350px;
+    padding: 10px;
+
+    > div {
+      margin-bottom: 10px;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    // color: map-get($active-theme, 'header-fg');
+    color: var(--header-fg);
+
+    > fieldset {
+      padding: 0;
+      position: relative;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      border: none;
+      margin-bottom: 3px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        width: 100%;
+        height: 1rem;
+        outline: 3px solid var(--keypad-bg);
+        border-radius: 100vw;
+        z-index: 0;
+        background-color: var(--keypad-bg);
+      }
+
+      input {
+        /* Add if not using autoprefixer */
+        -webkit-appearance: none;
+        appearance: none;
+        /* For iOS < 15 to remove gradient background */
+
+        /* Not removed via appearance */
+        // margin: 0;
+
+        z-index: 2;
+        font: inherit;
+        color: var(--button-fg-secondary);
+        width: 1rem;
+        height: 1rem;
+        border: none;
+        border-radius: 50%;
+      }
+
+      input:checked {
+        z-index: 3;
+        width: 1rem;
+
+        background-color: var(--button-bg-secondary);
+      }
+
+      > legend {
+        position: absolute;
+        left: -100%;
+        top: 50%;
+      }
+      > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        > input {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  input[type='text'] {
+    font-size: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: right;
+    padding: 1rem 1rem 0.5rem;
+    border-radius: 5px;
+    border: none;
+    // background-color: map-get($active-theme, 'input-bg');
+    // color: map-get($active-theme, 'input-fg');
+    background-color: var(--input-bg);
+    color: var(--input-fg);
+  }
+
+  .keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    gap: 15px;
+    padding: 15px 15px;
+    border-radius: 5px;
+    // background-color: map-get($active-theme, 'keypad-bg');
+    background-color: var(--keypad-bg);
+
+    > button {
+      border-color: transparent;
+      border-radius: 5px;
+      padding: 12px 3px 8px;
+      font-weight: 700;
+      font-size: 1.5rem;
+
+      // background-color: map-get($active-theme, 'button-bg-primary');
+      // color: map-get($active-theme, 'button-fg-primary');
+      background-color: var(--button-bg-primary);
+      color: var(--button-fg-primary);
+
+      &.secondary {
+        // background-color: map-get($active-theme, 'button-bg-secondary');
+        // color: map-get($active-theme, 'button-fg-secondary');
+
+        background-color: var(--button-bg-secondary);
+        color: var(--button-fg-secondary);
+      }
+
+      &.tertiary {
+        // background-color: map-get($active-theme, 'button-bg-tertiary');
+        // color: map-get($active-theme, 'button-fg-tertiary');
+
+        background-color: var(--button-bg-tertiary);
+        color: var(--button-fg-tertiary);
+      }
+
+      &.secondary,
+      &.tertiary {
+        font-size: 1.2rem;
+      }
+
+      &:active {
+        filter: brightness(0.8);
+      }
+    }
+
+    > button:nth-last-child(1) {
+      grid-column: 3 / span 2;
+    }
+
+    > button:nth-last-child(2) {
+      grid-column: 1 / span 2;
+    }
+  }
+}

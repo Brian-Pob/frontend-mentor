@@ -1,0 +1,85 @@
+:root {
+  /* Theme 1 Colors */
+  --blue-100: hsl(225, 21%, 49%);
+  --blue-200: hsl(224, 28%, 35%);
+  --blue-300: hsl(222, 26%, 31%);
+  --blue-400: hsl(221, 14%, 31%);
+  --blue-500: hsl(223, 31%, 20%);
+  --blue-600: hsl(224, 36%, 15%);
+  --cream-400: hsl(30, 25%, 89%);
+  --cream-600: hsl(28, 16%, 65%);
+  --red-400: hsl(6, 63%, 50%);
+  --red-600: hsl(6, 70%, 34%);
+  --white-400: hsl(0, 0%, 100%);
+
+  /* Theme 2 Colors */
+  --gray-100: hsl(0, 0%, 90%);
+  --gray-200: hsl(0, 0%, 93%);
+  --gray-400: hsl(0, 5%, 81%);
+  --gray-900: hsl(60, 10%, 19%);
+  --cream-400-theme2: hsl(45, 7%, 89%);
+  --cream-500: hsl(35, 11%, 61%);
+  --orange-400: hsl(25, 98%, 40%);
+  --orange-600: hsl(25, 99%, 27%);
+  --teal-400: hsl(185, 42%, 37%);
+  --teal-600: hsl(185, 58%, 25%);
+  --white-400-theme2: hsl(0, 0%, 100%);
+
+  /* Theme 3 Colors */
+  --purple-100: hsl(285, 91%, 52%);
+  --purple-200: hsl(290, 70%, 36%);
+  --purple-300: hsl(281, 89%, 26%);
+  --purple-400: hsl(268, 47%, 21%);
+  --purple-500: hsl(268, 71%, 12%);
+  --purple-600: hsl(268, 75%, 9%);
+  --cyan-400: hsl(177, 92%, 70%);
+  --cyan-500: hsl(176, 100%, 44%);
+  --yellow-400: hsl(52, 100%, 62%);
+  --dark-blue-400: hsl(198, 20%, 13%);
+  --white-400-theme3: hsl(0, 0%, 100%);
+}
+
+/* Theme 1 */
+.theme1 {
+  --main-bg: var(--blue-300);
+  --input-bg: var(--blue-600);
+  --input-fg: var(--white-400);
+  --keypad-bg: var(--blue-500);
+  --button-bg-primary: var(--cream-400);
+  --button-fg-primary: var(--blue-400);
+  --button-bg-secondary: var(--red-400);
+  --button-fg-secondary: var(--white-400);
+  --button-bg-tertiary: var(--blue-100);
+  --button-fg-tertiary: var(--white-400);
+  --header-fg: var(--white-400);
+}
+
+/* Theme 2 */
+.theme2 {
+  --main-bg: var(--gray-100);
+  --input-bg: var(--gray-200);
+  --input-fg: var(--gray-900);
+  --keypad-bg: var(--gray-400);
+  --button-bg-primary: var(--cream-400-theme2);
+  --button-fg-primary: var(--gray-900);
+  --button-bg-secondary: var(--orange-400);
+  --button-fg-secondary: var(--white-400);
+  --button-bg-tertiary: var(--teal-400);
+  --button-fg-tertiary: var(--white-400);
+  --header-fg: var(--gray-900);
+}
+
+/* Theme 3 */
+.theme3 {
+  --main-bg: var(--purple-600);
+  --input-bg: var(--purple-500);
+  --input-fg: var(--yellow-400);
+  --keypad-bg: var(--purple-500);
+  --button-bg-primary: var(--purple-400);
+  --button-fg-primary: var(--yellow-400);
+  --button-bg-secondary: var(--cyan-400);
+  --button-fg-secondary: var(--dark-blue-400);
+  --button-bg-tertiary: var(--purple-300);
+  --button-fg-tertiary: var(--white-400-theme3);
+  --header-fg: var(--yellow-400);
+}

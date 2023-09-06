@@ -90,6 +90,16 @@ const ChallengesList: Challenge[] = [
       'https://www.frontendmentor.io/solutions/responsive-grid-with-scss-and-openprops-Q2w4FoqgrC',
     imgTitle: 'testimonials.gif',
   },
+  {
+    name: 'Calculator with Theme Switcher',
+    path: '/Challenges/Calculator',
+    description:
+      'A simple calculator with a theme switcher. Using SCSS for styling. Mainly used grid for layout.',
+    tags: ['SolidJS', 'SCSS', 'CSS Grid'],
+    repoUrl: '',
+    fmUrl: '',
+    imgTitle: 'calculator.gif',
+  },
 ];
 
 export { ChallengesList };
