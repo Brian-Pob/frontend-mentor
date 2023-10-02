@@ -1,4 +1,5 @@
 @use './colors.scss';
+@use 'sass:color';
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
 main#calculator-challenge {
@@ -135,25 +136,25 @@ main#calculator-challenge {
       font-weight: 700;
       font-size: 1.5rem;
 
-      // background-color: map-get($active-theme, 'button-bg-primary');
-      // color: map-get($active-theme, 'button-fg-primary');
-      background-color: var(--button-bg-primary);
-      color: var(--button-fg-primary);
+      --_bg: var(--button-bg-primary);
+      --_fg: var(--button-fg-primary);
+      --_shadow: var(--button-shadow-primary);
+
+      background-color: var(--_bg);
+      color: var(--_fg);
+
+      box-shadow: 0 2px 0 var(--_shadow);
 
       &.secondary {
-        // background-color: map-get($active-theme, 'button-bg-secondary');
-        // color: map-get($active-theme, 'button-fg-secondary');
-
-        background-color: var(--button-bg-secondary);
-        color: var(--button-fg-secondary);
+        --_bg: var(--button-bg-secondary);
+        --_fg: var(--button-fg-secondary);
+        --_shadow: var(--button-shadow-secondary);
       }
 
       &.tertiary {
-        // background-color: map-get($active-theme, 'button-bg-tertiary');
-        // color: map-get($active-theme, 'button-fg-tertiary');
-
-        background-color: var(--button-bg-tertiary);
-        color: var(--button-fg-tertiary);
+        --_bg: var(--button-bg-tertiary);
+        --_fg: var(--button-fg-tertiary);
+        --_shadow: var(--button-shadow-tertiary);
       }
 
       &.secondary,
