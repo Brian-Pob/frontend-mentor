@@ -45,12 +45,19 @@
   --input-bg: var(--blue-600);
   --input-fg: var(--white-400);
   --keypad-bg: var(--blue-500);
+
   --button-bg-primary: var(--cream-400);
+  --button-shadow-primary: var(--cream-600);
   --button-fg-primary: var(--blue-400);
+
   --button-bg-secondary: var(--red-400);
+  --button-shadow-secondary: var(--red-600);
   --button-fg-secondary: var(--white-400);
+
   --button-bg-tertiary: var(--blue-100);
+  --button-shadow-tertiary: var(--blue-200);
   --button-fg-tertiary: var(--white-400);
+
   --header-fg: var(--white-400);
 }
 
@@ -60,12 +67,19 @@
   --input-bg: var(--gray-200);
   --input-fg: var(--gray-900);
   --keypad-bg: var(--gray-400);
+
   --button-bg-primary: var(--cream-400-theme2);
+  --button-shadow-primary: var(--cream-500);
   --button-fg-primary: var(--gray-900);
+
   --button-bg-secondary: var(--orange-400);
+  --button-shadow-secondary: var(--orange-600);
   --button-fg-secondary: var(--white-400);
+
   --button-bg-tertiary: var(--teal-400);
+  --button-shadow-tertiary: var(--teal-600);
   --button-fg-tertiary: var(--white-400);
+
   --header-fg: var(--gray-900);
 }
 
@@ -75,11 +89,17 @@
   --input-bg: var(--purple-500);
   --input-fg: var(--yellow-400);
   --keypad-bg: var(--purple-500);
+
   --button-bg-primary: var(--purple-400);
+  --button-shadow-primary: var(--purple-300);
   --button-fg-primary: var(--yellow-400);
+
   --button-bg-secondary: var(--cyan-400);
+  --button-shadow-secondary: var(--cyan-500);
   --button-fg-secondary: var(--dark-blue-400);
+
   --button-bg-tertiary: var(--purple-300);
+  --button-shadow-tertiary: var(--purple-400);
   --button-fg-tertiary: var(--white-400-theme3);
   --header-fg: var(--yellow-400);
 }
