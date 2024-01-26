@@ -1,11 +1,13 @@
-import { For, Show, createEffect, createRenderEffect, createSignal, onMount } from 'solid-js';
 import dayjs from 'dayjs';
-import isLeapYear from 'dayjs/plugin/isLeapYear';
-import './index.scss';
+import { For, Show, createEffect, createRenderEffect, createSignal, onMount } from 'solid-js';
 import buttonSvg from './icon-arrow.svg';
+import './index.scss';
+
+function isLeapYear(year: number): boolean {
+  return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+}
 
 export default function AgeCalculator() {
-  dayjs.extend(isLeapYear);
   const [year, setYear] = createSignal(1970);
   const [month, setMonth] = createSignal(1);
   const [day, setDay] = createSignal(1);
@@ -47,17 +49,9 @@ export default function AgeCalculator() {
     }
 
     // Handle leap years and months with 30 days
-    if (
-      dayjs(`${yearInput}-${monthInput}-${dayInput}`).isLeapYear() &&
-      monthInput === 2 &&
-      dayInput > 29
-    ) {
+    if (isLeapYear(yearInput) && monthInput === 2 && dayInput > 29) {
       setErrors((prev) => ({ ...prev, day: 'February has 29 days this year' }));
-    } else if (
-      !dayjs(`${yearInput}-${monthInput}-${dayInput}`).isLeapYear() &&
-      monthInput === 2 &&
-      dayInput > 28
-    ) {
+    } else if (!isLeapYear(yearInput) && monthInput === 2 && dayInput > 28) {
       setErrors((prev) => ({ ...prev, day: 'February has 28 days this year' }));
     } else if ([4, 6, 9, 11].includes(monthInput) && dayInput > 30) {
       setErrors((prev) => ({ ...prev, day: 'This month has 30 days' }));
