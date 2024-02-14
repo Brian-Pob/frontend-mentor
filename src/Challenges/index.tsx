@@ -6,8 +6,6 @@ import AgeCalculator from './AgeCalculator';
 import TestimonialsGrid from './TestimonialsGrid';
 import Calculator from './Calculator';
 
-import Redirector from '../components/Redirector';
-
 export {
   OrderSummaryComponent,
   Ping,
@@ -16,7 +14,4 @@ export {
   AgeCalculator,
   TestimonialsGrid,
   Calculator,
-
-  // Redirector for handling redirects to external sites
-  Redirector,
 };
