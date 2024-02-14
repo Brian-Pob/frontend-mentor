@@ -45,7 +45,7 @@ const ChallengesList: Challenge[] = [
   },
   {
     name: 'Article Preview Component',
-    path: '/Challenges/ArticlePreviewComponent',
+    path: 'https://cheerful-pastelito-dd1736.netlify.app/',
     description:
       'A simple article preview component. Using Tailwind CSS for styling. The layout of the component changes based on screen size',
     tags: ['SolidJS', 'Tailwind CSS', 'Media Queries'],
