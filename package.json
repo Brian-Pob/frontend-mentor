@@ -5,7 +5,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build && cp netlify.toml dist",
+    "build": "vite build",
     "serve": "vite preview"
   },
   "license": "MIT",
