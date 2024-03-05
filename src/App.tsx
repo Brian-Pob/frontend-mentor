@@ -1,15 +1,15 @@
-import { A, Navigate, Route, Router, Routes } from '@solidjs/router';
+import { Route, Router, Routes } from '@solidjs/router';
 import type { Component } from 'solid-js';
 import * as c from './Challenges';
-import { Challenges, Home } from './Pages';
-import { Footer, Navbar } from './components';
+import { Challenges } from './Pages';
+import { Navbar } from './components';
 const App: Component = () => {
   return (
     <>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Challenges />}></Route>
           <Route path="/Challenges">
             <Route path="/" element={<Challenges />} />
             <Route path="/OrderSummaryComponent" element={<c.OrderSummaryComponent />} />
@@ -20,8 +20,6 @@ const App: Component = () => {
             <Route path="/TestimonialsGrid" element={<c.TestimonialsGrid />} />
             <Route path="/Calculator" element={<c.Calculator />} />
 
-            {/* Paths below are hosted on a different site*/}
-            <Route path="/ArticlePreviewComponent" element={<c.Redirector />} />
           </Route>
         </Routes>
       </Router>
